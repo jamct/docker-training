@@ -1,0 +1,22 @@
+site_name: Container in der Praxis
+dev_addr: "0.0.0.0:8080"
+theme: "flatly"
+site_author: "Jan Mahn (c't magazin)"
+lang: ["de"]
+extra_css:
+    - css/extra.css
+markdown_extensions:
+    - attr_list
+    - admonition
+    - fontawesome_markdown
+
+nav:
+    - Willkommen: index.md
+    - Einrichtung: setup/index.md
+    - Labs:
+          - "Lab 1: Erste Schritte": lab1/index.md
+          - "Lab 2: Arbeiten mit Images": lab2/index.md
+          - "Lab 3: Komplexe Zusammenstellungen": lab3/index.md
+          #          - "Lab 4: Erste Schritte": lab4/index.md
+          - "Lab 5: Sichere Server-Dienste": lab5/index.md
+    - Infos: about/index.md

@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  docs:
+    build:
+      context: ./docs
+      dockerfile: Dockerfile-dev
+    ports:
+      - 8080:8080
+    volumes:
+      - ./docs/mkdocs/:/mkdocs
+  presentation:
+    build:
+      context: ./presentation
+      dockerfile: Dockerfile-dev
+    ports:
+      - 8081:8000
+    volumes:
+      - ./presentation/index.html:/var/run/reveal.js/index.html
+      - ./presentation/slides:/var/run/reveal.js/slides
