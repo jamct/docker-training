@@ -8,4 +8,7 @@ RUN cd reveal.js && npm install
 
 WORKDIR /var/run/reveal.js
 
+COPY index.html index.html
+COPY slides/ slides/
+
 CMD npm start

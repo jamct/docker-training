@@ -15,6 +15,7 @@ jobs:
       - uses: docker/build-push-action@v1
         with:
           dockerfile: docs/Dockerfile-prod
+          path: docs
           username: jamct
           password: ${{ secrets.GITHUB_TOKEN }}
           repository: jamct/docker-training/docs
