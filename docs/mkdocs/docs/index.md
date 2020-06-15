@@ -20,17 +20,5 @@ Los geht es mit der [Installation von Docker auf dem Server](./setup)
 | |[Lab 2: Arbeiten mit Images](lab2/index.md)|
 | |Impuls: Images im Docker-Hub finden|
 | |[Lab 3: Komplexe Zusammenstellungen mit Docker-Compose](lab3/index.md)|
-| |Impuls: Eingehenden Verkehr routen|
-| |[Lab 4: HTTP-Router und TLS mit Traefik](lab4/index.md)|
 |12:00|Fragen zu Tag 1|
 |12:30|Ende Tag 1|
-
-
-### Tag 2
-
-|Zeit|  |
-|---|---|
-|9:00|Offene Fragen|
-|12:00|Ihre Container-Strategie|
-|12:30|Ende Tag 2|
-

@@ -17,5 +17,4 @@ nav:
           - "Lab 1: Erste Schritte": lab1/index.md
           - "Lab 2: Arbeiten mit Images": lab2/index.md
           - "Lab 3: Komplexe Zusammenstellungen": lab3/index.md
-          - "Lab 4: HTTP-Router mit Traefik": lab4/index.md
     - Infos: about/index.md

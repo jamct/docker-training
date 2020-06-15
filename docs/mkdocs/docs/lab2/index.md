@@ -2,6 +2,8 @@
 
 Im ersten Teil haben Sie bereits zwei Images benutzt: `busyboy` und `nginx`. Aber wo kommen diese überhaupt her?
 
+![ ](https://heise.cloudimg.io/width/900/q65.png-lossy-65.webp-lossy-65.foil1/_www-heise-de_/select/ct/2017/15/1500578738258740/contentimages/image-1499146982969054.jpg)
+
 Der Reihe nach. Ursprung eines Images ist ein Rezept, das *Dockerfile*. Ein kleines Beispiel:
 
 ```dockerfile
@@ -99,8 +101,8 @@ Damit ein gestoppter Container nicht herumliegt und sofort abgeräumt wird, gibt
 docker run --rm simpleping
 ```
 
-## 2. Gute Images
 
+## 2. Gute Images
 
 !!! note "Gute Images erkennen"
 
