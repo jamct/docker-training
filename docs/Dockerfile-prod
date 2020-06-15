@@ -3,7 +3,7 @@ FROM python:3-alpine AS build
 RUN apk add build-base
 COPY ./mkdocs/ /mkdocs/
 WORKDIR /mkdocs/
-RUN pip install --upgrade pip && pip install mkdocs mkdocs-bootswatch
+RUN pip install --upgrade pip && pip install mkdocs mkdocs-bootswatch https://github.com/bmcorser/fontawesome-markdown/archive/master.zip
 RUN mkdocs build
 
 #web server stage
