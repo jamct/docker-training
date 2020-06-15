@@ -1,8 +1,21 @@
 version: "3.7"
 services:
-  docs:
-    build:
-      context: ./container
-      dockerfile: Dockerfile-prod
+  traefik:
+    image: traefik:v2.0
+    command: --providers.docker
+    restart: always
     ports:
-      - 8080:80
+      - 80:80
+      - 443:443
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:rw
+      - ./static.yml:/etc/traefik/traefik.yml
+      - ./dynamic.yml:/etc/traefik/dynamic/dynamic.yml
+      - ./acme.json:/etc/traefik/acme/acme.json
+
+  web2:
+    image: containous/whoami
+    labels:
+      - traefik.http.routers.web2.rule=Host(`web2.example.org`) || ( Host(`example.org`) && PathPrefix(`/web2`) )
+      - "traefik.http.routers.web2.tls.certResolver=default"
+      - "traefik.http.routers.web2.tls=true"
