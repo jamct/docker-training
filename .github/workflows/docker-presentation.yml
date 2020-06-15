@@ -17,6 +17,6 @@ jobs:
           dockerfile: presentation/Dockerfile-prod
           username: jamct
           password: ${{ secrets.GITHUB_TOKEN }}
-          repository: presentation
+          repository: jamct/docker-training/presentation
           registry: docker.pkg.github.com
           tags: latest
