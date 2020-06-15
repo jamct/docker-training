@@ -8,8 +8,7 @@ RUN cd reveal.js && npm install
 
 WORKDIR /var/run/reveal.js
 
-COPY index.html index.html
-COPY slides/ slides/
+COPY index.html /var/run/reveal.js/index.html
+COPY slides/ /var/run/reveal.js/slides/
 
-EXPOSE 80
-CMD npm start --port 80
+CMD npm start -- --port=80
