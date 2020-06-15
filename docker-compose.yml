@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   traefik:
-    image: traefik:v2.0
+    image: traefik:v2.2
     command: --providers.docker
     restart: always
     ports:
@@ -9,13 +9,29 @@ services:
       - 443:443
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:rw
-      - ./static.yml:/etc/traefik/traefik.yml
-      - ./dynamic.yml:/etc/traefik/dynamic/dynamic.yml
-      - ./acme.json:/etc/traefik/acme/acme.json
+      - ./traefik/static.yml:/etc/traefik/traefik.yml
+      - ./traefik/dynamic.yml:/etc/traefik/dynamic/dynamic.yml
+      - ./traefik/acme.json:/etc/traefik/acme/acme.json
 
-  web2:
-    image: containous/whoami
+  docs:
+    image: docker.pkg.github.com/jamct/docker-training/docs:latest
     labels:
-      - traefik.http.routers.web2.rule=Host(`web2.example.org`) || ( Host(`example.org`) && PathPrefix(`/web2`) )
+      - traefik.http.routers.web2.rule=Host(`docs.liefer.it`)
       - "traefik.http.routers.web2.tls.certResolver=default"
       - "traefik.http.routers.web2.tls=true"
+      - "com.centurylinklabs.watchtower.enable=true"
+
+  presentation:
+    image: docker.pkg.github.com/jamct/docker-training/docs:latest
+    labels:
+      - traefik.http.routers.web2.rule=Host(`presentation.liefer.it`)
+      - "traefik.http.routers.web2.tls.certResolver=default"
+      - "traefik.http.routers.web2.tls=true"
+      - "com.centurylinklabs.watchtower.enable=true"
+
+  watchtower:
+    image: containrrr/watchtower
+    command: --cleanup --label-enable
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
