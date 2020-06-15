@@ -13,7 +13,13 @@ Es geht um:  <!-- .element: class="fragment" data-fragment-index="1" -->
 * Weniger Ärger mit Abhängigkeiten <!-- .element: class="fragment" data-fragment-index="4" -->
 
 Note:
-test
+
+---
+
+# Status Quo: Server vorher
+
+
+
 
 ---
 ## Demo 1
