@@ -5,6 +5,7 @@ on:
     branches: [master]
     paths:
       - presentation/**
+      - .github/workflows/docker-presentation.yml
 
 jobs:
   build:
@@ -17,6 +18,6 @@ jobs:
         with:
           username: jamct
           password: ${{ secrets.GITHUB_TOKEN }}
-          repository: presentation:latest
+          repository: presentation
           registry: docker.pkg.github.com
           tags: latest
