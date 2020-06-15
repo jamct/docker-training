@@ -12,10 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Build the Docker image
-        run: docker build . --file ./presentation/Dockerfile-prod --tag presentation:latest
       - uses: docker/build-push-action@v1
         with:
+          dockerfile: presentation/Dockerfile-prod
           username: jamct
           password: ${{ secrets.GITHUB_TOKEN }}
           repository: presentation
