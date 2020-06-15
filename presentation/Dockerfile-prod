@@ -1,4 +1,5 @@
 FROM node:14-alpine
+LABEL maintainer="jam@ct.de"
 
 WORKDIR /var/run
 

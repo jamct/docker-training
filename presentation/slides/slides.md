@@ -16,9 +16,13 @@ Note:
 
 ---
 
-# Status Quo: Server vorher
+# Status Quo
 
+"Server sind wie Haustiere. Sie werden gepflegt, für viel Geld am Leben erhalten. Stirbt ein Server, bricht eine Welt zusammen."
 
+# Pets vs. Cattle
+
+"In der Container-Welt sind Container und ihre Hosts wie Vieh. Sie sind ersetzbar! Stirbt ein Container, übernimmt der nächste."
 
 
 ---
