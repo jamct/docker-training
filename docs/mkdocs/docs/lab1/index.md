@@ -14,6 +14,7 @@ docker ps
 
 ## 1. Der erste Container
 
+![ ](https://heise.cloudimg.io/width/900/q65.png-lossy-65.webp-lossy-65.foil1/_www-heise-de_/select/ct/2016/5/1456733697045992/contentimages/image-145552165478819.jpg)
 Jeder Container besteht aus einem Image. Es enthält das Dateisystem mit allen Dateien, die für den Betrieb gebraucht werden.
 
 Einen Container starten Sie mit `docker run <Name des Images>`. Ein Abbild für Linux-Experimente heißt `busybox`.
