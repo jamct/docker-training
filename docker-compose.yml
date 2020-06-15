@@ -15,6 +15,7 @@ services:
 
   docs:
     image: docker.pkg.github.com/jamct/docker-training/docs:latest
+    restart: always
     labels:
       - traefik.http.routers.docs.rule=Host(`docs.liefer.it`)
       - "traefik.http.routers.docs.tls.certResolver=default"
@@ -23,6 +24,7 @@ services:
 
   presentation:
     image: docker.pkg.github.com/jamct/docker-training/presentation:latest
+    restart: always
     labels:
       - traefik.http.routers.presentation.rule=Host(`presentation.liefer.it`)
       - "traefik.http.routers.presentation.tls.certResolver=default"

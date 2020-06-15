@@ -11,4 +11,5 @@ WORKDIR /var/run/reveal.js
 COPY index.html /var/run/reveal.js/index.html
 COPY slides/ /var/run/reveal.js/slides/
 
+EXPOSE 80
 CMD npm start -- --port=80
