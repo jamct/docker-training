@@ -142,9 +142,11 @@ CMD ["mkdocs", "serve"]
 
 ---
 
-## Komplexe Zusammenstellungen
+## Lab 3: Komplexe Zusammenstellungen
 
 ![ ](https://heise.cloudimg.io/width/900/q65.png-lossy-65.webp-lossy-65.foil1/_www-heise-de_/select/ct/2018/26/1545022229896925/contentimages/image-1543829635702846.jpg)
+
+---
 
 ## Ihre Fragen zum ersten Tag
 
