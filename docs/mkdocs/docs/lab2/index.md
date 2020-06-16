@@ -117,5 +117,3 @@ docker run --rm simpleping
     5. Abrufzahlen, Dokumentation und Sterne im Docker Hub geben einen Hinweis, ob das Projekt aktiv benutzt wird.
 
     6. Kennen Sie den Ersteller nicht, bevorzugen Sie Images mit automatischen Builds und schauen Sie ins Dockerfile.
-
-    7. Ein Werkzeug wie Anchore hilft dabei, die verwendeten Programme und ihre Sicherheitsprobleme zu analysieren.

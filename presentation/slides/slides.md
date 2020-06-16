@@ -153,3 +153,27 @@ CMD ["mkdocs", "serve"]
 Am zweiten Tag routen wir eingehenden Verkehr, schauen auf Logs und grafische Oberflächen und wollen Ihre Pläne diskutieren.
 
 Sollten im Laufe des Nachmittags Fragen gekommen sein: jam@ct.de
+
+---
+
+ ## Herzlich Willkommen
+
+![ ](https://www.heise-events.de/uploads/OnuAG8xJ/766x0_2560x0/Docker_2000x500.jpg)
+
+Tag 2, 17.06.2020
+
+---
+
+## Automation mit GitHub Actions
+
+
+---
+
+# Nützlinge im Container-Zoo
+
+* Traefik
+* Watchtower
+
+---
+
+

@@ -22,3 +22,14 @@ Los geht es mit der [Installation von Docker auf dem Server](./setup)
 | |[Lab 3: Komplexe Zusammenstellungen mit Docker-Compose](lab3/index.md)|
 |12:00|Fragen zu Tag 1|
 |12:30|Ende Tag 1|
+
+### Tag 2
+
+|Zeit|  |
+|---|---|
+|9:00|Offene Fragen von Tag 1|
+| |Ihre Erfahrungen bei der Image-Suche|
+| |[Lab 4: Automatisch bauen und veröffentlichen](lab4/index.md)|
+| |[Lab 5: Nützliche Helfer](lab5/index.md)|
+| |[Lab 6: HTTP-Verkehr routen](lab6/index.md)|
+|~12:00|Ihre Container-Strategie (offenes Gesprächsangebot)|

@@ -17,4 +17,7 @@ nav:
           - "Lab 1: Erste Schritte": lab1/index.md
           - "Lab 2: Arbeiten mit Images": lab2/index.md
           - "Lab 3: Komplexe Zusammenstellungen": lab3/index.md
+          - "Lab 4: Automatisch bauen": lab4/index.md
+          - "Lab 5: Nützliche Helfer": lab5/index.md
+          - "Lab 6: HTTP-Routing": lab6/index.md
     - Infos: about/index.md
