@@ -1,0 +1,7 @@
+FROM python:3-alpine
+RUN apk --update --upgrade add gcc musl-dev jpeg-dev zlib-dev libffi-dev cairo-dev pango-dev gdk-pixbuf-dev
+COPY ./mkdocs/ /mkdocs/
+WORKDIR /mkdocs/
+RUN pip install --upgrade pip && pip install mkdocs mkdocs-bootswatch https://github.com/bmcorser/fontawesome-markdown/archive/master.zip mkdocs-pdf-export-plugin mkdocs-material
+EXPOSE 8080
+CMD ["mkdocs", "serve"]

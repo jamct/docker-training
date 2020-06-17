@@ -2,7 +2,7 @@
 
 Im ersten Teil haben Sie bereits zwei Images benutzt: `busyboy` und `nginx`. Aber wo kommen diese überhaupt her?
 
-![ ](https://heise.cloudimg.io/width/900/q65.png-lossy-65.webp-lossy-65.foil1/_www-heise-de_/select/ct/2017/15/1500578738258740/contentimages/image-1499146982969054.jpg)
+![ ](https://heise.cloudimg.io/width/900/q65.png-lossy-65.webp-lossy-65.foil1/_www-heise-de_/select/ct/2017/15/1500578738258740/contentimages/image-1499146982969054.jpg){: class="noprint"}
 
 Der Reihe nach. Ursprung eines Images ist ein Rezept, das *Dockerfile*. Ein kleines Beispiel:
 
@@ -25,7 +25,7 @@ Solange dieser Prozess läuft, existiert der Container.
 |---|---|---|
 |`FROM`|definiert das Basis-Image|`FROM debian:buster-slim`|
 |`RUN`|führt einen Befehl während des Bauprozesses aus|`RUN apt update && apt install ping`|
-|`COPY`|kopiert Dateien und Ordner in den Container (Pfad ausgehend vom Dockerfile)|`COPY settings.conf /etc/test/settings.conf`|
+|`COPY`|kopiert Dateien und Ordner in den Container|`COPY settings.conf /etc/test/settings.conf`|
 |`CMD`|definiert den Prozess, der im Container laufen soll|`CMD ping heise.de`|
 
 

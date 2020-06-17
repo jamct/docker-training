@@ -1,4 +1,19 @@
-/*Just some ugly demo CSS...*/
-h1{
-   /* color: #00538f;*/
-  }
+@page {
+   size: a4 portrait;
+   margin: 25mm 10mm 25mm 10mm;
+   counter-increment: page;
+   font-family: Helvetica,Arial,sans-serif;
+   white-space: pre;
+   color: grey;
+}
+
+@media print{
+
+img{
+   width: 90%;
+}
+
+.noprint{
+   display: none;
+}
+}

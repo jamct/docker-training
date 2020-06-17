@@ -17,7 +17,7 @@ services:
     image: docker.pkg.github.com/jamct/docker-training/docs:latest
     restart: always
     labels:
-      - traefik.http.routers.docs.rule=Host(`docs.liefer.it`)
+      - traefik.http.routers.docs.rule=Host(`${DOCS_DOMAIN}`)
       - "traefik.http.routers.docs.tls.certResolver=default"
       - "traefik.http.routers.docs.tls=true"
       - "com.centurylinklabs.watchtower.enable=true"
@@ -26,7 +26,7 @@ services:
     image: docker.pkg.github.com/jamct/docker-training/presentation:latest
     restart: always
     labels:
-      - traefik.http.routers.presentation.rule=Host(`presentation.liefer.it`)
+      - traefik.http.routers.presentation.rule=Host(`${PRESENTATION_DOMAIN}`)
       - "traefik.http.routers.presentation.tls.certResolver=default"
       - "traefik.http.routers.presentation.tls=true"
       - "com.centurylinklabs.watchtower.enable=true"

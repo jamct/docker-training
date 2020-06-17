@@ -32,4 +32,4 @@ Los geht es mit der [Installation von Docker auf dem Server](./setup)
 | |[Lab 4: Automatisch bauen und veröffentlichen](lab4/index.md)|
 | |[Lab 5: Nützliche Helfer](lab5/index.md)|
 | |[Lab 6: HTTP-Verkehr routen](lab6/index.md)|
-|~12:00|Ihre Container-Strategie (offenes Gesprächsangebot)|
+| |[Offene Fragen und Ausblick](outlook/index.md)|

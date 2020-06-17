@@ -6,7 +6,7 @@ Ein solcher Router, der wahrhaft "Cloud-Native" ist und sich gut auf einem Docke
 
 ## Traefik einrichten
 
-![ ](https://heise.cloudimg.io/width/900/q65.png-lossy-65.webp-lossy-65.foil1/_www-heise-de_/select/ct/2019/17/1565693316870479/contentimages/image-1564472350617001.jpg)
+![ ](https://heise.cloudimg.io/width/900/q65.png-lossy-65.webp-lossy-65.foil1/_www-heise-de_/select/ct/2019/17/1565693316870479/contentimages/image-1564472350617001.jpg){: class="noprint"}
 
 Für die Traefik-Eintrichtung sollten Sie am besten ein eigenes Repository mit dem Compose-File und einigen Config-Files anlegen. In die Compose-Datei stecken Sie ggf. noch Watchtower und Portainer. Ins Repo kann man dann noch ein Bash-Script legen, das Docker installiert. Dann hat man einen Ordner mit allen Rezepten für einen neuen Docker-Server.
 

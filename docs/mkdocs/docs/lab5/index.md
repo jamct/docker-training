@@ -66,7 +66,7 @@ Zum Betrieb reicht der Compose-Schnipsel:
     restart: always
     volumes:
      - /var/run/docker.sock:/var/run/docker.sock
-     - ./portainer:/data portainer/portainer
+     - ./portainer:/data
 ```
 
 ![Portainer zeigt in einer Weboberfläche, wie es auf dem Docker-Host aussieht.](portainer.png)
