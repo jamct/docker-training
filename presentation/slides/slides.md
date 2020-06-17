@@ -170,7 +170,7 @@ Tag 2, 17.06.2020
 
 ## Docker und Windows
 
-![ ]https://heise.cloudimg.io/width/900/q65.png-lossy-65.webp-lossy-65.foil1/_www-heise-de_/select/ct/2018/5/1519616862422776/contentimages/image-1518182492265127.jpg)
+![ ](https://heise.cloudimg.io/width/900/q65.png-lossy-65.webp-lossy-65.foil1/_www-heise-de_/select/ct/2018/5/1519616862422776/contentimages/image-1518182492265127.jpg)
 
 ---
 
