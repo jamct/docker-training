@@ -164,16 +164,29 @@ Tag 2, 17.06.2020
 
 ---
 
+## Fragen von gestern
+
+---
+
+## Docker und Windows
+
+![ ]https://heise.cloudimg.io/width/900/q65.png-lossy-65.webp-lossy-65.foil1/_www-heise-de_/select/ct/2018/5/1519616862422776/contentimages/image-1518182492265127.jpg)
+
+---
+
+## Linux-Container auf Windows
+
+[ ](https://heise.cloudimg.io/bound/500x500/q60.png-lossy-60.webp-lossy-60.foil1/_www-heise-de_/select/ct/2018/5/1519616862422776/tn_jam.LinuxContainer_gon_IG.jpg)
+
+---
+
+## Windows-Container auf Windows
+
+* Die Grundlagen sind identisch (Docker-CLI)
+* Vorsicht bei der Wahl des Basis-Images
+
+---
+
 ## Automation mit GitHub Actions
 
-
 ---
-
-# Nützlinge im Container-Zoo
-
-* Traefik
-* Watchtower
-
----
-
-

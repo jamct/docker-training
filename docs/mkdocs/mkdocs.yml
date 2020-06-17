@@ -21,3 +21,4 @@ nav:
           - "Lab 5: Nützliche Helfer": lab5/index.md
           - "Lab 6: HTTP-Routing": lab6/index.md
     - Infos: about/index.md
+    - Docker unter Windows: windows/index.md
