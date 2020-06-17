@@ -1,6 +1,6 @@
 site_name: Container in der Praxis
 dev_addr: "0.0.0.0:8080"
-theme: "material"
+theme: "flatly"
 site_author: "Jan Mahn (c't magazin)"
 extra_css:
     - css/extra.css
@@ -8,12 +8,11 @@ markdown_extensions:
     - attr_list
     - admonition
     - fontawesome_markdown
-plugins:
-    - pdf-export:
-          verbose: true
-          media_type: print
-          combined: true
-
+# plugins:
+#     - pdf-export:
+#           verbose: true
+#           media_type: print
+#           combined: true
 nav:
     - Willkommen: index.md
     - Einrichtung: setup/index.md
