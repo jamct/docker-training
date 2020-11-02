@@ -2,7 +2,7 @@
 
 ![ ](https://www.heise-events.de/uploads/OnuAG8xJ/766x0_2560x0/Docker_2000x500.jpg)
 
-16. und 17.06.2020
+3. und 4.11.2020
 ---
 
 ## Ihr Dozent
@@ -160,7 +160,7 @@ Sollten im Laufe des Nachmittags Fragen gekommen sein: jam@ct.de
 
 ![ ](https://www.heise-events.de/uploads/OnuAG8xJ/766x0_2560x0/Docker_2000x500.jpg)
 
-Tag 2, 17.06.2020
+Tag 2, 4.11.2020
 
 ---
 
