@@ -84,6 +84,28 @@ Alle Workshop-Inhalte finden Sie unter [docs.liefer.it](https://docs.liefer.it)
 ![ ](https://heise.cloudimg.io/width/900/q65.png-lossy-65.webp-lossy-65.foil1/_www-heise-de_/select/ct/2016/5/1456733697045992/contentimages/image-145552165478819.jpg)
 
 ---
+
+## Lab 2: Arbeiten mit Images
+
+![ ](https://heise.cloudimg.io/width/900/q65.png-lossy-65.webp-lossy-65.foil1/_www-heise-de_/select/ct/2017/15/1500578738258740/contentimages/image-1499146982969054.jpg)
+
+
+---
+
+ ## Herzlich Willkommen
+
+![ ](https://www.heise-events.de/uploads/OnuAG8xJ/766x0_2560x0/Docker_2000x500.jpg)
+
+Tag 2, 4.11.2020
+
+---
+
+## Fragen von gestern
+
+* Ist noVNC eine Lösung für Produktionsumgebungen?
+* Muss es immer Docker sein? Was ist mit Podman? Was in mit Kubernetes?
+
+
 ## Was gehört in ein Image
 
 * die Anwendung <!-- .element: class="fragment" data-fragment-index="1" -->
@@ -112,12 +134,6 @@ tar -xf nginx.tar
 
 ---
 
-## Lab 2: Arbeiten mit Images
-
-![ ](https://heise.cloudimg.io/width/900/q65.png-lossy-65.webp-lossy-65.foil1/_www-heise-de_/select/ct/2017/15/1500578738258740/contentimages/image-1499146982969054.jpg)
-
----
-
 ## Ein Beispiel aus der Praxis
 
 ```dockerfile
@@ -132,41 +148,12 @@ CMD ["mkdocs", "serve"]
 
 ---
 
-## Der Docker-Hub
-
-[hub.docker.com](https://hub.docker.com)
-
-* eine, aber nicht die die einzige Quelle für Docker-Images
-* jeder darf Images veröffentlichen!
-* es gibt viele sehr gute Images
-
----
-
 ## Lab 3: Komplexe Zusammenstellungen
 
 ![ ](https://heise.cloudimg.io/width/900/q65.png-lossy-65.webp-lossy-65.foil1/_www-heise-de_/select/ct/2018/26/1545022229896925/contentimages/image-1543829635702846.jpg)
 
 ---
 
-## Ihre Fragen zum ersten Tag
-
-Am zweiten Tag routen wir eingehenden Verkehr, schauen auf Logs und grafische Oberflächen und wollen Ihre Pläne diskutieren.
-
-Sollten im Laufe des Nachmittags Fragen gekommen sein: jam@ct.de
-
----
-
- ## Herzlich Willkommen
-
-![ ](https://www.heise-events.de/uploads/OnuAG8xJ/766x0_2560x0/Docker_2000x500.jpg)
-
-Tag 2, 4.11.2020
-
----
-
-## Fragen von gestern
-
----
 
 ## Docker und Windows
 

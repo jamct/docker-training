@@ -141,6 +141,15 @@ DB_USER=wordpress
 DB_PASS=secret
 ```
 
+## 2.2 Wenn es mal wieder länger dauert
+
+Ein häufiges Problem: Ich weiß, dass meine Anwendung beim Stoppen länger braucht – weil ich zum Beispiel erst alle Daten aus dem Speicher sichere. Normalerweise fackelt Docker nicht lange und sendet schon 10 Sekunden nach einem `SIGTERM`direkt den `SIGKILL`. Wenn ich meiner Anwendung die Zeit geben will, in Ruhe herunterzufahren, teile ich das im Compose-File mit:
+
+```
+slow_service:
+  image: slow-image:slow
+  stop_grace_period: 2m
+```
 
 ## 3: Docker-Compose macht vieles einfacher:
 
