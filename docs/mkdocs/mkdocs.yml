@@ -1,6 +1,7 @@
 site_name: Container in der Praxis
 dev_addr: "0.0.0.0:8080"
-theme: "flatly"
+theme: "material"
+# theme: "material"
 site_author: "Jan Mahn (c't magazin)"
 extra_css:
     - css/extra.css
@@ -24,5 +25,8 @@ nav:
           - "Lab 5: Nützliche Helfer": lab5/index.md
           - "Lab 6: HTTP-Routing": lab6/index.md
     - Docker unter Windows: windows/index.md
-    - Ausblick und Fragen: outlook/index.md
+    - Ausblick und FAQ: 
+        - "FAQ": outlook/index.md
+        - "Aktuelle Ergänzung": outlook/current.md
+        - "Exkurs zu Benutzern und UIDs": outlook/security.md
     - Infos: about/index.md

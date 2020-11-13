@@ -72,7 +72,6 @@ Ja, da gibt es nichts zu aktivieren. Wenn die Seite per TLS ausgeliefert wird, w
 
 ## Weitere Software
 
-
 Im Workshop wurde an einigen auf Themen und Konzepte verwiesen. Hier noch einmal eine kleine Übersicht und Links:
 
 ### 1. Kubernetes
@@ -95,3 +94,6 @@ Zwei Registries haben wir behandelt: Den Docker-Hub und die GitHub-Registry. Wen
 * [Harbor](https://goharbor.io)
 * [GitLab](https://docs.gitlab.com/ee/user/packages/container_registry/)
 
+### 3. Backup
+
+Ein vielseitiges Werkzeug, das Backups von Volumes macht, und zum Beispiel auf einen S3-Speicher legt, ist [Bivac](https://github.com/camptocamp/bivac/wiki/Installation#docker). Bei der Einrichtung kommt wieder das bekannte Konzept zum Weiterreichen des Docker-Sockets zum Einsatz, damit der Container Volumes erkennen und sichern kann.
