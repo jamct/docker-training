@@ -1,4 +1,4 @@
-# :fa-flask: Lab 5: HTTP-Routing mit Traefik
+# :fa-flask: Lab 6: HTTP-Routing mit Traefik
 
 Bisher haben wir die Server-Anwendungen alle nacheinander gestartet. Es darf ja immer nur ein Prozess Port 80 belegen. So kann man eine Maschine natürlich nicht effizient nutzen. Man braucht einen Router, der eingehenden (HTTP-)Verkehr entgegennimmt und an den richtigen Container weitergibt. Nur der Router lauscht an Port 80 – und an Port 443, weil er ganz nebenbei noch für TLS und Zertifikatsbeschaffung zuständig ist.
 
