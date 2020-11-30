@@ -2,7 +2,7 @@
 
 ![ ](https://www.heise-events.de/uploads/OnuAG8xJ/766x0_2560x0/Docker_2000x500.jpg)
 
-3. und 4.11.2020
+1. und 2.12.2020
 ---
 
 ## Ihr Dozent
@@ -96,7 +96,7 @@ Alle Workshop-Inhalte finden Sie unter [docs.liefer.it](https://docs.liefer.it)
 
 ![ ](https://www.heise-events.de/uploads/OnuAG8xJ/766x0_2560x0/Docker_2000x500.jpg)
 
-Tag 2, 4.11.2020
+Tag 2, 2.12.2020
 
 ---
 
