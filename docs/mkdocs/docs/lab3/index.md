@@ -21,7 +21,7 @@ ist auf Dauer keine Lösung. Das Grundprinzip "Ein Prozess, ein Container" hat z
 Prüfen Sie, ob Docker-Compose installiert ist:
 
 ```
-docker-compose version
+docker compose version
 ```
 
 ## Grundlagen: YAML
@@ -86,7 +86,7 @@ services:
 Wenn die Datei auf dem Server liegt, können Sie die Zusammenstellung starten:
 
 ```
-docker-compose up
+docker compose up
 ```
 
 Jetzt brauchen Sie etwas Geduld: Docker lädt die unhandlichen Images aus dem Hub herunter und fährt die Datenbank hoch. Das dauert, weil die Datenbank noch leer ist – MySQL richtet sich erstmal ein.
@@ -94,20 +94,20 @@ Jetzt brauchen Sie etwas Geduld: Docker lädt die unhandlichen Images aus dem Hu
 Wie bei `docker run` gibt es auch bei Docker-Compose einen detached-Modus. Ein fertiges Setup würden Sie mit starten mit:
 
 ```
-docker-compose up -d
+docker compose up -d
 ```
 
 Das Gegenteil von `up` lautet (logisch):
 
 ```
-docker-compose down
+docker compose down
 ```
 
 Und auch andere bekannte Befehle finden Sie wieder:
 
 ```
-docker-compose ps
-docker-compose exec -it <service> sh
+docker compose ps
+docker compose exec -it <service> sh
 ```
 
 ## 2.2 Umgebungsvariablen

@@ -280,7 +280,7 @@ Diese Datei baut das Image bei der Ausführung und hängt den "Code", also die D
 Zum Hochfahren:
 
 ```
-docker-compose -f docker-compose-dev.yml
+docker compose -f docker-compose-dev.yml
 ```
 
 !!! warning "Sicherheitstipp für Entwicklermaschinen"

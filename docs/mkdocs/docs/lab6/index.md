@@ -124,7 +124,7 @@ Wenn Sie das Netzwerk angelegt haben, ist es an der Zeit, Traefik zu starten. Tr
 Fahren Sie die Zusammenstellung hoch:
 
 ```
-docker-compose up -d
+docker compose up -d
 ```
 
 Bisher passiert noch nichts. Wenn Sie eine beliebige Subdomain Ihres Servers im Browser öffnen, sehen Sie eine Fehlermeldung. Es gibt ja noch keinen Dienst, den Traefik veröffentlichen könnte.

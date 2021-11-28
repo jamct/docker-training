@@ -48,11 +48,11 @@ services:
 Gestartet werden soll ein Container, der mit `sleep` am Leben gehalten wird, aber nichts weiter tut. Mit `user:` übergeben Sie den Benutzer, der im Container laufen soll. Statt der `33` könnten Sie hier auch den Namen `www-data` ausschreiben. Was dann passiert: Docker fragt beim Gastgeber nach, löst den Namen zur UID auf und übergibt die UID in den Container. Fahren Sie das ganze hoch und springen Sie in den Container:
 
 ```
-docker-compose up -d
-docker-compose exec test sh
+docker compose up -d
+docker compose exec test sh
 ```
 
-Zeigen Sie sich dann an, wer den Prozess ausführt. Es ist `www-data`. Dass dieser Name hier angezeigt wird, ist aber purer Zufall – weil im Busybox-Container in `etc/passwd` ebenfalls dieser Name angelegt ist. Sie könnten im Container aber auch einen ganz anderen Namen für diese UID vergeben, das spielt keine Rolle. Wichtig ist: Die Syscalls aus dem Container-Prozess kommen mit der UID beim Kernel des Gasgebers an. Und nur darauf kommt es an. Das funktioniert übrigens auch, wenn es die UID im Container gar nicht gibt. Verlassen Sie den Container, fahren ihn mit `docker-compose down` herunter und ändern das Dockerfile auf `user: 1005`. Wieder hochfahren, reintunneln und mit `ps` die UID anzeigen – angzeigt wird nur die Nummer, es gibt keine Namensauflösung, der Prozess funktioniert dennoch. Ein `whoami` im Container sagt ebenfalls, dass es den User hier nicht gibt. Das Fazit: Der Nutzer im Container ist nur was fürs Auge (vielleicht schön, wenn Sie Logging im Container eingebaut haben und da der richtige Name stehen soll), relevant für Volumes ist die ID des Gastgeber-Kernels!
+Zeigen Sie sich dann an, wer den Prozess ausführt. Es ist `www-data`. Dass dieser Name hier angezeigt wird, ist aber purer Zufall – weil im Busybox-Container in `etc/passwd` ebenfalls dieser Name angelegt ist. Sie könnten im Container aber auch einen ganz anderen Namen für diese UID vergeben, das spielt keine Rolle. Wichtig ist: Die Syscalls aus dem Container-Prozess kommen mit der UID beim Kernel des Gasgebers an. Und nur darauf kommt es an. Das funktioniert übrigens auch, wenn es die UID im Container gar nicht gibt. Verlassen Sie den Container, fahren ihn mit `docker compose down` herunter und ändern das Dockerfile auf `user: 1005`. Wieder hochfahren, reintunneln und mit `ps` die UID anzeigen – angzeigt wird nur die Nummer, es gibt keine Namensauflösung, der Prozess funktioniert dennoch. Ein `whoami` im Container sagt ebenfalls, dass es den User hier nicht gibt. Das Fazit: Der Nutzer im Container ist nur was fürs Auge (vielleicht schön, wenn Sie Logging im Container eingebaut haben und da der richtige Name stehen soll), relevant für Volumes ist die ID des Gastgeber-Kernels!
 
 ## Konsequenz für die Praxis
 
