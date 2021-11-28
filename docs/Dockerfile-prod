@@ -1,6 +1,5 @@
 #build stage
-FROM python:3-alpine AS build
-RUN apk add build-base
+FROM python:3 AS build
 COPY ./mkdocs/ /mkdocs/
 WORKDIR /mkdocs/
 RUN pip install --upgrade pip && pip install mkdocs mkdocs-material mkdocs-bootswatch https://github.com/bmcorser/fontawesome-markdown/archive/master.zip

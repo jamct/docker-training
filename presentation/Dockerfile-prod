@@ -1,4 +1,4 @@
-FROM node:14-alpine
+FROM node:16-alpine
 LABEL maintainer="jam@ct.de"
 
 WORKDIR /var/run
@@ -13,4 +13,4 @@ COPY index.html /var/run/reveal.js/index.html
 COPY slides/ /var/run/reveal.js/slides/
 
 EXPOSE 80
-CMD npm start -- --port=80
+CMD npm start -- --host=0.0.0.0 --port=80
