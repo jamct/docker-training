@@ -22,6 +22,9 @@ Es geht um:  <!-- .element: class="fragment" data-fragment-index="1" -->
 * Weniger Ärger mit Abhängigkeiten <!-- .element: class="fragment" data-fragment-index="4" -->
 
 ---
+![ ](https://www.heise.de/select/ct/2021/24/2127409262474574019/ct2321dockerfur_albert_hulm_117229_jam_a_16zu9.jpg)
+
+---
 
 ## Status Quo
 
