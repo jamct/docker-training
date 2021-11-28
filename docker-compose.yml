@@ -14,7 +14,7 @@ services:
       - ./traefik/acme.json:/etc/traefik/acme/acme.json
 
   docs:
-    image: docker.pkg.github.com/jamct/docker-training/docs:latest
+    image: ghcr.io/jamct/workshop/docs:latest
     restart: always
     labels:
       - traefik.http.routers.docs.rule=Host(`${DOCS_DOMAIN}`)
@@ -23,7 +23,7 @@ services:
       - "com.centurylinklabs.watchtower.enable=true"
 
   presentation:
-    image: docker.pkg.github.com/jamct/docker-training/presentation:latest
+    image: ghcr.io/jamct/workshop/presentation:latest
     restart: always
     labels:
       - traefik.http.routers.presentation.rule=Host(`${PRESENTATION_DOMAIN}`)
