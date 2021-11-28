@@ -33,7 +33,7 @@ services:
 
   watchtower:
     image: containrrr/watchtower
-    command: --cleanup --label-enable
+    command: --cleanup --label-enable --interval 350
     restart: always
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
