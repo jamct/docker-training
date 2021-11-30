@@ -161,12 +161,12 @@ jobs:
           path: .
           username: jamct
           password: ${{ secrets.GITHUB_TOKEN }}
-          repository: jamct/demo-docs/mkdocs
-          registry: docker.pkg.github.com
+          repository: jamct/workshop/docs
+          registry: ghcr.io
           tags: latest
 ```
 
-Ein paar Anmerkungen zum (groben) Verständnis: Die GitHub-Registry orientiert sich an den Repos. Innerhalb eines Repos kann es mehrere Images geben. Daher ist der Name des Containers auch länger: `jamct/demo-docs/mkdocs:latest`.
+Ein paar Anmerkungen zum (groben) Verständnis: Die GitHub-Registry orientiert sich an den Repos. Innerhalb eines Repos kann es mehrere Images geben. Daher ist der Name des Containers auch länger: `jamct/workshop/docs:latest`.
 
 Innerhalb des Repos gibt es ein Token (`${{ secrets.GITHUB_TOKEN }}`), mit dem sich der Actions-Worker an der Registry anmeldet.
 
@@ -179,10 +179,21 @@ Danach sehen Sie das fertige Paket unter "1 package" im Reiter "Code".
 Kopieren Sie den ganzen Pull-Befehl mit dem Namen heraus und fügen ihn im Server ein, zum Beispiel:
 
 ```
-docker pull docker.pkg.github.com/jamct/demo-docs/mkdocs:latest
+docker pull ghcr.io/jamct/workshow/docs:latest
 ```
 
-Docker beklagt sich, dass eine Anmeldung nötig ist (aktuell auch bei öffentlichen Images, GitHub ist da dran). Zum Anmelden sollten Sie nicht Ihr Kennwort, sondern ein Token nehmen. Das generieren Sie unter der Adresse
+Und anschließend
+
+```
+docker run -p 80:8080 ghcr.io/jamct/workshop/docs:latest
+```
+
+![ ](ready.png)
+
+
+## 3.1.1 Private Registries
+
+Ein Hinweis, wenn Sie eine private Registry nutzen wollen (zum Beispiel die von GitHub): Zum Anmelden sollten Sie nicht Ihr Kennwort, sondern ein Token nehmen. Das generieren Sie unter der Adresse
 
 [https://github.com/settings/tokens](https://github.com/settings/tokens)
 
@@ -190,27 +201,13 @@ Angehakt sein müssen die Punkte `repo` und `read:packages`:
 
 ![ ](token.png)
 
-Auf dem Server können Sie sich anmelden mit:
+Anmelden an einer Registry können Sie sich mit:
 
 ```
-docker login docker.pkg.github.com
+docker login ghcr.io
 Username: <Username>
 Password: <das Token>
 ```
-
-Danach klappt auch
-
-```
-docker pull docker.pkg.github.com/jamct/demo-docs/mkdocs:latest
-```
-
-Und anschließend
-
-```
-docker run -p 80:8080 docker.pkg.github.com/jamct/demo-docs/mkdocs:latest
-```
-
-![ ](ready.png)
 
 ## 3.2 Image im Docker-Hub
 
@@ -241,8 +238,8 @@ jobs:
           path: .
           username: jamct
           password: ${{ secrets.GITHUB_TOKEN }}
-          repository: jamct/demo-docs/mkdocs
-          registry: docker.pkg.github.com
+          repository: jamct/workshop/presentation
+          registry: ghcr.io
           tags: latest
       # neue Action für den Hub:    
       - uses: docker/build-push-action@v1
