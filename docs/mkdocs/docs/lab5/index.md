@@ -60,7 +60,7 @@ Zum Betrieb reicht der Compose-Schnipsel:
 
 ```
   portainer:
-    image: portainer/portainer
+    image: portainer/portainer-ce
     ports:
      - 80:9000
     restart: always
