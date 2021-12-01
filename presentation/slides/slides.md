@@ -107,6 +107,7 @@ Tag 2, 1.12.2021
 
 * Muss es immer Docker sein? Was ist mit Podman? Was in mit Kubernetes?
 
+
 ## Was gehört in ein Image
 
 * die Anwendung <!-- .element: class="fragment" data-fragment-index="1" -->
