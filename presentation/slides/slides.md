@@ -105,9 +105,7 @@ Tag 2, 1.12.2021
 
 ## Fragen von gestern
 
-* Ist noVNC eine Lösung für Produktionsumgebungen?
 * Muss es immer Docker sein? Was ist mit Podman? Was in mit Kubernetes?
-
 
 ## Was gehört in ein Image
 
