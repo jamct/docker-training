@@ -39,12 +39,14 @@ Unter Windows und macOS müssen Sie Docker-Compose nicht separat installieren, e
 
 Unter Linux war Docker-Compose früher ein separates Programm, das in Python geschrieben ist.
 
-Neuerdings gibt es Compose als Erweiterung der Docker-CLI. Installiert wird diese mit folgenden drei Zeilen
+Neuerdings gibt es Compose als Erweiterung der Docker-CLI. Bis März 2022 musste man Docker-Compose per Curl per Hand herunterladen. Seitdem ist es in den Paketquellen enthalten. Wenn das Installations-Skript durchgelaufen ist und Docker installiert hat, installiert man Docker-Compose mit:
 
 ```
-mkdir -p ~/.docker/cli-plugins/
-curl -SL https://github.com/docker/compose/releases/download/v2.2.3/docker-compose-linux-x86_64 -o ~/.docker/cli-plugins/docker-compose
-chmod +x ~/.docker/cli-plugins/docker-compose
+apt install docker-compose-plugin
 ```
 
 Wenn Sie irgendwo Anleitungen mit `docker-compose` finden, lassen Sie den Bindestrich weg und schreiben: `docker compose`
+
+### Nach der Installation
+
+Wenn Docker und Docker-Compose installiert sind, geht es in [Lab 1](/lab1/) weiter mit den ersten Kommandozeilen-Befehlen.

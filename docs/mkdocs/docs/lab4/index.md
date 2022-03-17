@@ -50,32 +50,7 @@ Was jetzt folgt, ist Versuch und Irrtum. Versuchen wir, dieses Dockerfile zu bau
 docker build .
 ```
 
-Der Bauvorgang beginnt vielversprechend, scheitert aber nach 30 Sekunden mit viel rotem Output:
-
-```bash
-[...]
-    building 'regex._regex' extension
-    creating build/temp.linux-x86_64-3.8
-    creating build/temp.linux-x86_64-3.8/regex_3
-    gcc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -DTHREAD_STACK_SIZE=0x100000 -fPIC -I/usr/local/include/python3.8 -c regex_3/_regex.c -o build/temp.linux-x86_64-3.8/regex_3/_regex.o
-    unable to execute 'gcc': No such file or directory
-    error: command 'gcc' failed with exit status 1
-    ----------------------------------------
-ERROR: Command errored out with exit status 1: /usr/local/bin/python -u -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-iygh9d3r/regex/setup.py'"'"'; __file__='"'"'/tmp/pip-install-iygh9d3r/regex/setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' install --record /tmp/pip-record-rzdtn9kz/install-record.txt --single-version-externally-managed --compile --install-headers /usr/local/include/python3.8/regex Check the logs for full command output.
-The command '/bin/sh -c pip install --upgrade pip && pip install mkdocs' returned a non-zero code: 1
-```
-
-Jetzt gilt es, den Fehler zu finden und Google zu befragen. Der entscheidende Hinweis: `'gcc': No such file or directory`. Der Python-Paketmanager braucht also den C-Compiler `gcc` für irgendein Paket. Ein Detail, das uns die Doku von MkDocs verschwieg. Auf einem klassischen Server würden wir das nachinstallieren und dann vergessen. Beim Dockern wird man gezwungen, das anständig reproduzierbar zu bauen. Gcc gibt es per Alpine-Paketquellen im Paket `build-base` (sagte die Suchmaschine). Nächster Versuch, neu ist Zeile 2:
-
-```
-FROM python:3-alpine
-RUN apk add build-base
-RUN pip install --upgrade pip && pip install mkdocs
-EXPOSE 8080
-CMD ["mkdocs", "serve"]
-```
-
-Kopieren Sie diesen Schnipsel und lassen Sie Docker bauen.
+Während Docker baut (etwa 3 Minuten) ist es Zeit für einen Kaffee.
 
 !!! note "Schichten sparen"
     Während das läuft, eine Anmerkung zum `&&`. Damit kann ich unter Linux zwei Befehle aneinander kleben. Ich könnte auch für jeden Befehl eine Zeile mit `RUN` ins Dockerfile schreiben. Docker erzeugt aber für jede Zeile eine Schicht. Das sollte ich vermeiden, wo ich nur kann. Man könnte auch überlegen, das `apk add` in die Zeile zu setzen. Das spart beim Bauen später Zeit und beim Herunterladen ebenso.

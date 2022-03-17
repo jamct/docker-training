@@ -9,11 +9,11 @@ markdown_extensions:
     - attr_list
     - admonition
     - fontawesome_markdown
-# plugins:
-#     - pdf-export:
-#           verbose: true
-#           media_type: print
-#           combined: true
+plugins:
+    - pdf-export:
+          verbose: true
+          media_type: print
+          combined: true
 nav:
     - Willkommen: index.md
     - Einrichtung: setup/index.md
@@ -24,6 +24,7 @@ nav:
           - "Lab 4: Automatisch bauen": lab4/index.md
           - "Lab 5: Nützliche Helfer": lab5/index.md
           - "Lab 6: HTTP-Routing": lab6/index.md
+          - "Lab 6: Strategie für die Zukunft": lab7/index.md
     - Docker unter Windows: windows/index.md
     - Ausblick und FAQ: 
         - "FAQ": outlook/index.md

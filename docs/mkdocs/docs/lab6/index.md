@@ -150,15 +150,12 @@ networks:
       name: router-network
 ```
 
-Diesen Schnipsel können Sie als Referenz für weitere Projekte nutzen. Wichtig ist folgendes:
+Diesen Schnipsel können Sie als Referenz für weitere Projekte nutzen. Wichtig ist Folgendes:
 
 * Traefik wird über die Labels konfiguriert. Jeder Container bekommt einen `router`, danach folgt ein Name, der hier `docs` lautet.
 * Für weitere Container müssen Sie einen anderen Router-Namen vergeben
 * Der Router bekommt eine Regel, nach der Traefik den eingehenden Verkehr filtern soll. Hier ist die Regel auf die Subdomain gesetzt
 * Andere Filter-Regeln erklärt die (recht gute) [Doku von Traefik](https://docs.traefik.io/routing/routers/) 
-
-
-
 
 
 Jetzt sollte auch klar werden, warum wir das Kunststück mit dem Netzwerk eingebaut haben. Wenn Sie ein Compose-Projekt mit der gesamten Infrastruktur und Traefik haben, kann das dauerhaft laufen. Davon unabhängig können Sie andere Projekte in eigenen Compose-Files hoch- und runterfahren.
