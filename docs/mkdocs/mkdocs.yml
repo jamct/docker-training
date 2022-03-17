@@ -10,10 +10,10 @@ markdown_extensions:
     - admonition
     - fontawesome_markdown
 plugins:
-    - pdf-export:
-          verbose: true
-          media_type: print
-          combined: true
+    # - pdf-export:
+    #       verbose: true
+    #       media_type: print
+    #       combined: true
 nav:
     - Willkommen: index.md
     - Einrichtung: setup/index.md
