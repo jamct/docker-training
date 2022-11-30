@@ -103,11 +103,6 @@ Tag 2, 30.11.2022
 
 ---
 
-## Fragen von gestern
-
-* Muss es immer Docker sein? Was ist mit Podman? Was in mit Kubernetes?
-
-
 ## Was gehört in ein Image
 
 * die Anwendung <!-- .element: class="fragment" data-fragment-index="1" -->
