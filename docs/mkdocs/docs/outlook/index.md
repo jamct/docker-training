@@ -97,3 +97,42 @@ Zwei Registries haben wir behandelt: Den Docker-Hub und die GitHub-Registry. Wen
 ### 3. Backup
 
 Ein vielseitiges Werkzeug, das Backups von Volumes macht, und zum Beispiel auf einen S3-Speicher legt, ist [Bivac](https://github.com/camptocamp/bivac/wiki/Installation#docker). Bei der Einrichtung kommt wieder das bekannte Konzept zum Weiterreichen des Docker-Sockets zum Einsatz, damit der Container Volumes erkennen und sichern kann.
+
+### Frage: 
+
+Ich habe im Netzwerk ein paar Dienste, die auf absehbare Zeit nicht mit Docker laufen. Kann ich die auch hinter Traefik betreiben und vielleicht sogar erreichen, dass Traefik HTTTPS für mich terminiert?
+
+### Antwort:
+
+Ja, das kann Traefik. Im Beispiel in Lab 6 haben wir eine Datei namens dynamic.yml angelegt. Die kann noch mehr als wir benutzt haben. Zunächst brauchen Sie je einen Eintrag unterhalb von `http.routers` (da liegt bereits die Rewrite-Regel) und `http.services` :
+
+```yml
+http:
+  routers:
+    https-redirect:
+      rule: "HostRegexp(`{any:.*}`)"
+      middlewares:
+        - https-redirect
+      service: redirect-all
+    
+    ## Neu:
+    beispiel-router:
+      rule: "Host(`externerserver.example.org`)"
+      service: mein-externer-server
+
+  services:
+    redirect-all:
+      loadBalancer:
+        servers:
+          - url: "":
+    ## Neu:
+    mein-externer-server:
+      loadBalancer:
+        servers:
+         - url: "http://192.168.2.5"
+         - url: "http://192.168.2.6"
+```
+
+Damit wird der Verkehr an externerserver.example.org an einen Service (einen Loadbalancer) namens `mein-externer-server` geleitet. Der wird darunter definiert. Er leitet den Verkehr immer abwechselnd an die beiden IP-Adressen im internen Netz weiter. Weil die dynamic.yml sofort geladen wird, muss man nicht mal Traefik neustarten.
+
+Weitere Tricks mit den Routern findet man in der [Traefik-Dokumentation](https://doc.traefik.io/traefik/routing/services/).

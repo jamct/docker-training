@@ -1,6 +1,6 @@
 # Aktuelles: Rate-Limiting im Hub
 
-Anfang November, parallel zum Workshop, hat Docker eine Änderung am Docker Hub in Kraft gesetzt. Seitdem werden lesende Zugriffe auf den Hub beschränkt (per API-Rate-Limiting). Das bedeutet: Ab 100 Pull-Versuchen in 6 Stunden von einer IP erreichen Sie schon das Limit. Das ist ein Problem, wenn Sie `watchtower` verwenden. Gezählt werden nämlich auch Requests, bei denen nichts heruntergeladen wird, weil die Checksumme schon bekannt ist! Watchtower übergeben Sie einfach eine ENV-Variable:
+Anfang November 2021 hat Docker eine Änderung am Docker Hub in Kraft gesetzt. Seitdem werden lesende Zugriffe auf den Hub beschränkt (per API-Rate-Limiting). Das bedeutet: Ab 100 Pull-Versuchen in 6 Stunden von einer IP erreichen Sie schon das Limit. Das ist ein Problem, wenn Sie `watchtower` verwenden. Gezählt werden nämlich auch Requests, bei denen nichts heruntergeladen wird, weil die Checksumme schon bekannt ist! Watchtower übergeben Sie einfach eine ENV-Variable:
 
 ```
 WATCHTOWER_POLL_INTERVAL = 1800

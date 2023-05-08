@@ -6,7 +6,7 @@
 docker version
 ```
 
-* Alle laufenden Container zeigt
+* Alle laufenden Container zeigt folgendes:
 
 ```
 docker ps
