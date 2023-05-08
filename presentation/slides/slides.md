@@ -2,7 +2,7 @@
 
 ![ ](https://www.heise-events.de/uploads/OnuAG8xJ/766x0_2560x0/Docker_2000x500.jpg)
 
-29. und 30.11.2022
+9. und 10.5.2023
 ---
 
 ## Ihr Dozent
@@ -99,7 +99,7 @@ Alle Workshop-Inhalte finden Sie unter [docs.liefer.it](https://docs.liefer.it)
 
 ![ ](https://www.heise-events.de/uploads/OnuAG8xJ/766x0_2560x0/Docker_2000x500.jpg)
 
-Tag 2, 30.11.2022
+Tag 2, 10.5.2023
 
 ---
 
