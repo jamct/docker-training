@@ -105,7 +105,7 @@ Tag 2, 10.5.2023
 
 ## Zur Historie
 
-* [2006 schlägt ein Google-Mitarbeiter die Funktion im Kernel vor](https://docs.kernel.org/admin-guide/cgroup-v1/cgroups.html)
+* [2006 schlägt ein Google-Mitarbeiter die Funktion cgroups im Kernel vor](https://docs.kernel.org/admin-guide/cgroup-v1/cgroups.html)
 * 2007 im Kernel
 * 2013 erscheint Docker
 * 2015 erscheint Kubernetes
