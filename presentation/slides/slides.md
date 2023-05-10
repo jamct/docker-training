@@ -103,6 +103,16 @@ Tag 2, 10.5.2023
 
 ---
 
+## Zur Historie
+
+* [2006 schlägt ein Google-Mitarbeiter die Funktion im Kernel vor](https://docs.kernel.org/admin-guide/cgroup-v1/cgroups.html)
+* 2007 im Kernel
+* 2013 erscheint Docker
+* 2015 erscheint Kubernetes
+* [2017 wird die OCI gegründet](https://opencontainers.org)
+
+---
+
 ## Was gehört in ein Image
 
 * die Anwendung <!-- .element: class="fragment" data-fragment-index="1" -->
@@ -145,32 +155,3 @@ CMD ["mkdocs", "serve"]
 
 ---
 
-## Lab 3: Komplexe Zusammenstellungen
-
-![ ](https://heise.cloudimg.io/width/900/q65.png-lossy-65.webp-lossy-65.foil1/_www-heise-de_/select/ct/2018/26/1545022229896925/contentimages/image-1543829635702846.jpg)
-
----
-
-
-## Docker und Windows
-
-![ ](https://heise.cloudimg.io/width/900/q65.png-lossy-65.webp-lossy-65.foil1/_www-heise-de_/select/ct/2018/5/1519616862422776/contentimages/image-1518182492265127.jpg)
-
----
-
-## Linux-Container auf Windows
-
-[ ](https://heise.cloudimg.io/bound/500x500/q60.png-lossy-60.webp-lossy-60.foil1/_www-heise-de_/select/ct/2018/5/1519616862422776/tn_jam.LinuxContainer_gon_IG.jpg)
-
----
-
-## Windows-Container auf Windows
-
-* Die Grundlagen sind identisch (Docker-CLI)
-* Vorsicht bei der Wahl des Basis-Images
-
----
-
-## Automation mit GitHub Actions
-
----
