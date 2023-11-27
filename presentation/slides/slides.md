@@ -1,27 +1,30 @@
- ## Herzlich Willkommen
+## Herzlich Willkommen
 
 ![ ](https://www.heise-events.de/uploads/OnuAG8xJ/766x0_2560x0/Docker_2000x500.jpg)
 
-9. und 10.5.2023
+28. und 29.11.2023
+
 ---
 
 ## Ihr Dozent
 
-* Jan Mahn
-* seit 2017 c't-Redakteur im Ressort Systeme und Sicherheit
-* zuständig für Server-Systeme, Container, Software-Entwicklung
-* (begeisterter) Docker-Nutzer seit 2017
+- Jan Mahn
+- seit 2017 c't-Redakteur im Ressort Systeme und Sicherheit
+- zuständig für Server-Systeme, Container, Software-Entwicklung
+- (begeisterter) Docker-Nutzer seit 2017
 
 ---
 
 # "Es geht nicht um Docker"
 
-Es geht um:  <!-- .element: class="fragment" data-fragment-index="1" -->
-* Flexibilität <!-- .element: class="fragment" data-fragment-index="2" -->
-* Ersetzbare Server <!-- .element: class="fragment" data-fragment-index="3" -->
-* Weniger Ärger mit Abhängigkeiten <!-- .element: class="fragment" data-fragment-index="4" -->
+Es geht um: <!-- .element: class="fragment" data-fragment-index="1" -->
+
+- Flexibilität <!-- .element: class="fragment" data-fragment-index="2" -->
+- Ersetzbare Server <!-- .element: class="fragment" data-fragment-index="3" -->
+- Weniger Ärger mit Abhängigkeiten <!-- .element: class="fragment" data-fragment-index="4" -->
 
 ---
+
 ![ ](https://www.heise.de/select/ct/2021/24/2127409262474574019/ct2321dockerfur_albert_hulm_117229_jam_a_16zu9.jpg)
 
 ---
@@ -36,16 +39,16 @@ Es geht um:  <!-- .element: class="fragment" data-fragment-index="1" -->
 
 "Schlimmer als die Frage, warum etwas **nicht** funktioniert, ist ist Frage, warum es funktioniert."
 
-* Abhängigkeiten in bestimmten Versionen festgenagelt <!-- .element: class="fragment" data-fragment-index="1" -->
-* Mehrere (virtuelle) Maschinen für parallele alte Abhängigkeiten <!-- .element: class="fragment" data-fragment-index="2" -->
+- Abhängigkeiten in bestimmten Versionen festgenagelt <!-- .element: class="fragment" data-fragment-index="1" -->
+- Mehrere (virtuelle) Maschinen für parallele alte Abhängigkeiten <!-- .element: class="fragment" data-fragment-index="2" -->
 
 ---
 
 ## Wunschzustand
 
-* Die Anwendung läuft heute im eigenen RZ, morgen vielleicht in "der Cloud" <!-- .element: class="fragment" data-fragment-index="1" -->
-* Es gibt eine 1:1-Kopie auf meiner Entwicklermaschine <!-- .element: class="fragment" data-fragment-index="2" -->
-* Ich sichere die Daten und das Rezept, um ein Produktivsystem zu erzeugen <!-- .element: class="fragment" data-fragment-index="3" -->
+- Die Anwendung läuft heute im eigenen RZ, morgen vielleicht in "der Cloud" <!-- .element: class="fragment" data-fragment-index="1" -->
+- Es gibt eine 1:1-Kopie auf meiner Entwicklermaschine <!-- .element: class="fragment" data-fragment-index="2" -->
+- Ich sichere die Daten und das Rezept, um ein Produktivsystem zu erzeugen <!-- .element: class="fragment" data-fragment-index="3" -->
 
 ---
 
@@ -53,7 +56,7 @@ Es geht um:  <!-- .element: class="fragment" data-fragment-index="1" -->
 
 "Cloud-Native heißt: Nutze die Techniken großer Anwendungen, die (auch) in der Cloud laufen. Wächst die Anwendung, ist sie von Anfang an skalierbar konzipiert."
 
---- 
+---
 
 ## Pets vs. Cattle
 
@@ -69,10 +72,10 @@ Es geht um:  <!-- .element: class="fragment" data-fragment-index="1" -->
 
 ## Wege zum Ziel
 
-* Dienste in Container verpacken <!-- .element: class="fragment" data-fragment-index="1" -->
-* Container-Abbilder automatisch bauen<!-- .element: class="fragment" data-fragment-index="2" -->
-* Container-Host automatisch einrichten<!-- .element: class="fragment" data-fragment-index="3" -->
-* Reproduzierbare Zusammenstellungen<!-- .element: class="fragment" data-fragment-index="4" -->
+- Dienste in Container verpacken <!-- .element: class="fragment" data-fragment-index="1" -->
+- Container-Abbilder automatisch bauen<!-- .element: class="fragment" data-fragment-index="2" -->
+- Container-Host automatisch einrichten<!-- .element: class="fragment" data-fragment-index="3" -->
+- Reproduzierbare Zusammenstellungen<!-- .element: class="fragment" data-fragment-index="4" -->
 
 ---
 
@@ -92,41 +95,40 @@ Alle Workshop-Inhalte finden Sie unter [docs.liefer.it](https://docs.liefer.it)
 
 ![ ](https://heise.cloudimg.io/width/900/q65.png-lossy-65.webp-lossy-65.foil1/_www-heise-de_/select/ct/2017/15/1500578738258740/contentimages/image-1499146982969054.jpg)
 
-
 ---
 
- ## Herzlich Willkommen
+## Herzlich Willkommen
 
 ![ ](https://www.heise-events.de/uploads/OnuAG8xJ/766x0_2560x0/Docker_2000x500.jpg)
 
-Tag 2, 10.5.2023
+Tag 2, 29.11.2023
 
 ---
 
 ## Zur Historie
 
-* [2006 schlägt ein Google-Mitarbeiter die Funktion cgroups im Kernel vor](https://docs.kernel.org/admin-guide/cgroup-v1/cgroups.html)
-* 2007 im Kernel
-* 2013 erscheint Docker
-* 2015 erscheint Kubernetes
-* [2017 wird die OCI gegründet](https://opencontainers.org)
+- [2006 schlägt ein Google-Mitarbeiter die Funktion cgroups im Kernel vor](https://docs.kernel.org/admin-guide/cgroup-v1/cgroups.html)
+- 2007 im Kernel
+- 2013 erscheint Docker
+- 2015 erscheint Kubernetes
+- [2017 wird die OCI gegründet](https://opencontainers.org)
 
 ---
 
 ## Was gehört in ein Image
 
-* die Anwendung <!-- .element: class="fragment" data-fragment-index="1" -->
-* ein minimales Userland <!-- .element: class="fragment" data-fragment-index="2" -->
-* ggf. Laufzeitumgebung / Interpreter <!-- .element: class="fragment" data-fragment-index="3" -->
-* alle Abhängigkeiten <!-- .element: class="fragment" data-fragment-index="4" -->
+- die Anwendung <!-- .element: class="fragment" data-fragment-index="1" -->
+- ein minimales Userland <!-- .element: class="fragment" data-fragment-index="2" -->
+- ggf. Laufzeitumgebung / Interpreter <!-- .element: class="fragment" data-fragment-index="3" -->
+- alle Abhängigkeiten <!-- .element: class="fragment" data-fragment-index="4" -->
 
 ---
 
 ## Images bestehen aus Schichten
 
-* jede Schicht verändert etwas am Dateisystem
-* Beim Start des Containers setzt der Docker-Daemon alle Schichten zu einem System zusammen
-* identische Schichten liegen nur einmal auf der Festplatte des Hosts
+- jede Schicht verändert etwas am Dateisystem
+- Beim Start des Containers setzt der Docker-Daemon alle Schichten zu einem System zusammen
+- identische Schichten liegen nur einmal auf der Festplatte des Hosts
 
 ---
 
@@ -154,4 +156,3 @@ CMD ["mkdocs", "serve"]
 ```
 
 ---
-

@@ -16,7 +16,7 @@ Die Arbeit beginnt mit dem Compose-File `docker-compose.yml`:
 version: "3.7"
 services:
   traefik:
-    image: traefik:v2.2
+    image: traefik:v2.10
     command: --providers.docker
     restart: always
     ports:
@@ -34,9 +34,8 @@ services:
 
 networks:
   router:
-    external: 
-      name: router-network
-
+    name: router-network
+    external: true
 ```
 
 Hier kommt erstmals ein neues Konzept zum Einsatz: Der Router wird an ein Netzwerk mit dem Namen `router` gebunden. Am Ende der Datei wird dieses Netzwerk bekannt gemacht: Docker-Compose soll ein extern erzeugtes Netzwerk, das draußen `router-network` heißt, innerhalb des Files als `router` bekannt machen.
@@ -123,7 +122,7 @@ Wenn Sie das Netzwerk angelegt haben, ist es an der Zeit, Traefik zu starten. Tr
 
 Fahren Sie die Zusammenstellung hoch:
 
-```
+```bash
 docker compose up -d
 ```
 
@@ -141,6 +140,7 @@ services:
       - "traefik.http.routers.docs.rule=Host(`docs.00.liefer.it`)"
       - "traefik.http.routers.docs.tls.certResolver=default"
       - "traefik.http.routers.docs.tls=true"
+      - "traefik.http.services.docs.loadbalancer.server.port=80"
       - "com.centurylinklabs.watchtower.enable=true"
     networks:
       - router
@@ -157,7 +157,9 @@ Diesen Schnipsel können Sie als Referenz für weitere Projekte nutzen. Wichtig 
 * Der Router bekommt eine Regel, nach der Traefik den eingehenden Verkehr filtern soll. Hier ist die Regel auf die Subdomain gesetzt
 * Andere Filter-Regeln erklärt die (recht gute) [Doku von Traefik](https://docs.traefik.io/routing/routers/) 
 
-
 Jetzt sollte auch klar werden, warum wir das Kunststück mit dem Netzwerk eingebaut haben. Wenn Sie ein Compose-Projekt mit der gesamten Infrastruktur und Traefik haben, kann das dauerhaft laufen. Davon unabhängig können Sie andere Projekte in eigenen Compose-Files hoch- und runterfahren.
 
 Fahren Sie Ihre Doku mit Docker-Compose hoch. Am Anfang wird sich der Browser beklagen – Traefik fängt sofort an, ein Zertifikat passend zur Host-Regel zu bestellen. Das dauert maximal fünf Minuten.
+
+## WordPress-Beispiel hinter Traefik veröffentlichen
+
