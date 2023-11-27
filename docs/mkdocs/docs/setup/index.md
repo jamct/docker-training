@@ -1,18 +1,17 @@
-# :fa-wrench: Docker einrichten
+# :material-wrench: Docker einrichten
 
-Die Software Docker hat das Unternehmen Docker Inc. ursprünglich in zwei Varianten angeboten: *Docker Enterprise* und *Docker Community*. Nachdem die Enterprise-Sparte an Mirantis verkauft wurde, sind nur noch die Open-Source-Variante *Docker Community* und *Docker Desktop* interessant.
+Die Software Docker hat das Unternehmen Docker Inc. ursprünglich in zwei Varianten angeboten: _Docker Enterprise_ und _Docker Community_. Nachdem die Enterprise-Sparte an Mirantis verkauft wurde, sind nur noch die Open-Source-Variante _Docker Community_ und _Docker Desktop_ interessant.
 
 ## Für Windows und macOS
 
 Es gibt die Docker Desktop mit grafischer Oberfläche für Windows und macOS. Wählen Sie am besten die Stable-Variante, Edge enthält Beta-Funktionen:
 
-* [Download bei Docker Inc.](https://www.docker.com/products/docker-desktop)
+- [Download bei Docker Inc.](https://www.docker.com/products/docker-desktop)
 
 ![ ](macos.png){: style="width:50%"}
 
 !!! note "Bezahlen für Docker Desktop"
-    Docker Desktop (mit der GUI) ist für kleine Unternehmen kostenlos. Ab 250 Mitarbeitern oder mehr als 10 Millionen US-Dollar Umsatz muss man monatlich pro Benutzer zahlen. Preise: [https://www.docker.com/pricing](https://www.docker.com/pricing)
-
+Docker Desktop (mit der GUI) ist für kleine Unternehmen kostenlos. Ab 250 Mitarbeitern oder mehr als 10 Millionen US-Dollar Umsatz muss man monatlich pro Benutzer zahlen. Preise: [https://www.docker.com/pricing](https://www.docker.com/pricing)
 
 ## Für Linux und Linux-Server
 
