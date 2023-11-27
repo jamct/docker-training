@@ -1,4 +1,4 @@
-# :fa-flask: Lab 6: HTTP-Routing mit Traefik
+# :material-flask: Lab 6: HTTP-Routing mit Traefik
 
 Bisher haben wir die Server-Anwendungen alle nacheinander gestartet. Es darf ja immer nur ein Prozess Port 80 belegen. So kann man eine Maschine natürlich nicht effizient nutzen. Man braucht einen Router, der eingehenden (HTTP-)Verkehr entgegennimmt und an den richtigen Container weitergibt. Nur der Router lauscht an Port 80 – und an Port 443, weil er ganz nebenbei noch für TLS und Zertifikatsbeschaffung zuständig ist.
 
@@ -29,7 +29,7 @@ services:
       - ./traefik/acme.json:/etc/traefik/acme/acme.json
     networks:
       - router
-    
+
 # [...] Ergänzen Sie ggf. Watchtower, Portainer und andere Tools nach Belieben...
 
 networks:
@@ -107,7 +107,6 @@ chmod 600 acme.json
 
 Dieser Schritt ist dringend notwendig. In dieser Datei speichert Traefik die Zertifikate.
 
-
 Das Repository sieht jetzt so aus:
 
 ```
@@ -146,20 +145,19 @@ services:
       - router
 networks:
   router:
-    external: 
+    external:
       name: router-network
 ```
 
 Diesen Schnipsel können Sie als Referenz für weitere Projekte nutzen. Wichtig ist Folgendes:
 
-* Traefik wird über die Labels konfiguriert. Jeder Container bekommt einen `router`, danach folgt ein Name, der hier `docs` lautet.
-* Für weitere Container müssen Sie einen anderen Router-Namen vergeben
-* Der Router bekommt eine Regel, nach der Traefik den eingehenden Verkehr filtern soll. Hier ist die Regel auf die Subdomain gesetzt
-* Andere Filter-Regeln erklärt die (recht gute) [Doku von Traefik](https://docs.traefik.io/routing/routers/) 
+- Traefik wird über die Labels konfiguriert. Jeder Container bekommt einen `router`, danach folgt ein Name, der hier `docs` lautet.
+- Für weitere Container müssen Sie einen anderen Router-Namen vergeben
+- Der Router bekommt eine Regel, nach der Traefik den eingehenden Verkehr filtern soll. Hier ist die Regel auf die Subdomain gesetzt
+- Andere Filter-Regeln erklärt die (recht gute) [Doku von Traefik](https://docs.traefik.io/routing/routers/)
 
 Jetzt sollte auch klar werden, warum wir das Kunststück mit dem Netzwerk eingebaut haben. Wenn Sie ein Compose-Projekt mit der gesamten Infrastruktur und Traefik haben, kann das dauerhaft laufen. Davon unabhängig können Sie andere Projekte in eigenen Compose-Files hoch- und runterfahren.
 
 Fahren Sie Ihre Doku mit Docker-Compose hoch. Am Anfang wird sich der Browser beklagen – Traefik fängt sofort an, ein Zertifikat passend zur Host-Regel zu bestellen. Das dauert maximal fünf Minuten.
 
 ## WordPress-Beispiel hinter Traefik veröffentlichen
-

@@ -1,4 +1,4 @@
-# :fa-flask: Lab 4: Ein gutes Image, automatisch gebaut
+# :material-flask: Lab 4: Ein gutes Image, automatisch gebaut
 
 Zur Erininnerung: Bisher haben wir Images wie folgt gebaut:
 
@@ -6,8 +6,8 @@ Irgendwo auf der Festplatte des Servers haben wir ein `Dockerfile` angelegt und 
 
 Voraussetzung um die Anleitung nachzuvollziehen, ist ein Account bei Docker und einer bei GitHub (letzteren dürften die meisten Admins und Entwickler haben). Hier geht es zum Anlegen der Accounts:
 
-* [Account bei GitHub anlegen](https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)
-* [Account bei Docker anlegen](https://hub.docker.com/signup)
+- [Account bei GitHub anlegen](https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)
+- [Account bei Docker anlegen](https://hub.docker.com/signup)
 
 ## 1. Das Repo für den Code
 
@@ -24,8 +24,8 @@ Das Repo für dieses Beispiel heißt `demo-docs`. Wenn Sie es anders nennen, mü
 
 Dieses Lab soll auch die Denkweise veranschaulichen, wie man an das Bauen eines Images herangeht:
 
-* Gibt es ein MkDocs-Image (am besten der Entwickler) -> nein
-* Gibt es Drittanbieter-Images -> eher nein
+- Gibt es ein MkDocs-Image (am besten der Entwickler) -> nein
+- Gibt es Drittanbieter-Images -> eher nein
 
 Also muss ein eigenes Image her. Dazu lohnt ein Blick in die [Doku von MkDocs](https://www.mkdocs.org/#installing-mkdocs). Was dort steht, muss als Rezept in ein Dockerfile gelangen:
 
@@ -53,7 +53,7 @@ docker build .
 Während Docker baut (etwa 3 Minuten) ist es Zeit für einen Kaffee.
 
 !!! note "Schichten sparen"
-    Während das läuft, eine Anmerkung zum `&&`. Damit kann ich unter Linux zwei Befehle aneinander kleben. Ich könnte auch für jeden Befehl eine Zeile mit `RUN` ins Dockerfile schreiben. Docker erzeugt aber für jede Zeile eine Schicht. Das sollte ich vermeiden, wo ich nur kann. Man könnte auch überlegen, das `apk add` in die Zeile zu setzen. Das spart beim Bauen später Zeit und beim Herunterladen ebenso.
+Während das läuft, eine Anmerkung zum `&&`. Damit kann ich unter Linux zwei Befehle aneinander kleben. Ich könnte auch für jeden Befehl eine Zeile mit `RUN` ins Dockerfile schreiben. Docker erzeugt aber für jede Zeile eine Schicht. Das sollte ich vermeiden, wo ich nur kann. Man könnte auch überlegen, das `apk add` in die Zeile zu setzen. Das spart beim Bauen später Zeit und beim Herunterladen ebenso.
 
 Docker hat unterdessen gebaut und ein Image erzeugt, das man mal starten könnte.
 
@@ -71,10 +71,10 @@ dev_addr: "0.0.0.0:8080"
 site_author: "Ihr Name"
 
 markdown_extensions:
-    - attr_list
-    - admonition
+  - attr_list
+  - admonition
 nav:
-    - Willkommen: index.md
+  - Willkommen: index.md
 ```
 
 Außerdem brauchen Sie einen weiteren Unterordner `docs` (eine Vorgabe von MkDocs) und darin eine `index.md` mit etwas Markdown-Text:
@@ -165,7 +165,6 @@ docker run -p 80:8080 ghcr.io/jamct/workshop/docs:latest
 
 ![ ](ready.png)
 
-
 ## 3.1.1 Private Registries
 
 Ein Hinweis, wenn Sie eine private Registry nutzen wollen (zum Beispiel die von GitHub): Zum Anmelden sollten Sie nicht Ihr Kennwort, sondern ein Token nehmen. Das generieren Sie unter der Adresse
@@ -188,12 +187,12 @@ Password: <das Token>
 
 (diesen Abschnitt empfehlen wir für das Selbststudium, das Prinzip ist sehr ähnlich):
 
-* Melden Sie sich im Docker-Hub an
-* Erstellen Sie mit "Create Repository" ein Repo und geben ihm einen Namen
-* Erzeuen Sie ein Token unter https://hub.docker.com/settings/security
-* Wechseln Sie zu GitHub und im Repo auf "Settings", dort auf "Secrets". Legen Sie das Secret `DOCKER_TOKEN` an und kopieren Sie das Token aus dem Docker-Hub hier hinein.
+- Melden Sie sich im Docker-Hub an
+- Erstellen Sie mit "Create Repository" ein Repo und geben ihm einen Namen
+- Erzeuen Sie ein Token unter https://hub.docker.com/settings/security
+- Wechseln Sie zu GitHub und im Repo auf "Settings", dort auf "Secrets". Legen Sie das Secret `DOCKER_TOKEN` an und kopieren Sie das Token aus dem Docker-Hub hier hinein.
 
-* Öffnen Sie die YAML-Datei `.github/workflows/docker.yml` und ergänzen Sie einen Block für den Docker-Hub:
+- Öffnen Sie die YAML-Datei `.github/workflows/docker.yml` und ergänzen Sie einen Block für den Docker-Hub:
 
 ```yaml
 name: Build docs
@@ -216,7 +215,7 @@ jobs:
           repository: jamct/workshop/presentation
           registry: ghcr.io
           tags: latest
-      # neue Action für den Hub:    
+      # neue Action für den Hub:
       - uses: docker/build-push-action@v1
         with:
           dockerfile: Dockerfile
@@ -228,7 +227,6 @@ jobs:
 ```
 
 Die Action läuft sofort an und pusht in den Hub.
-
 
 # 4. Entwickeln mit Automationen im Alltag
 
@@ -256,11 +254,10 @@ docker compose -f docker-compose-dev.yml
 ```
 
 !!! warning "Sicherheitstipp für Entwicklermaschinen"
-    Wer im Unternehmensnetz Docker auf der eigenen Maschine laufen lässt und solche Entwicklungsumgebungen hochfährt, veröffentlicht sie auch auf der Netzwerkkarte des PCs. Sie ist also ggf. im Unternehmensnetz sichtbar (wenn keine Firewall auf der Maschine dazwischengeht). Das kann nützlich sein, um Kollegen in einem Meeting die Ergebnisse live vorzuführen.
-    
+Wer im Unternehmensnetz Docker auf der eigenen Maschine laufen lässt und solche Entwicklungsumgebungen hochfährt, veröffentlicht sie auch auf der Netzwerkkarte des PCs. Sie ist also ggf. im Unternehmensnetz sichtbar (wenn keine Firewall auf der Maschine dazwischengeht). Das kann nützlich sein, um Kollegen in einem Meeting die Ergebnisse live vorzuführen.
+
     Wenn man zum Experimentieren mit produktiven Daten arbeitet, sollte man den Zugriff aber auf das Loopback-Interface einschränken. Das geht mit:
-    
+
     ```
      - 127.0.0.1:80:8080
     ```
-

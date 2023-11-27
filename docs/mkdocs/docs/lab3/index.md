@@ -1,8 +1,8 @@
-# :fa-flask: Lab 3: Komplexe Zusammenstellungen mit Docker-Compose
+# :material-flask: Lab 3: Komplexe Zusammenstellungen mit Docker-Compose
 
 Bisher haben Sie Docker-Container mit `docker run` gestartet. Schon in den ersten Beispielen, in denen Volumes und Ports zum Einsatz kamen, wurden die Befehle lang und unübersichtlich.
 
-Ein Befehl wie 
+Ein Befehl wie
 
 ```bash
 docker run \
@@ -37,23 +37,23 @@ auto:
       name: Wolfsburg
       plz: 38440
   tags:
-   - auto
-   - kfz
+    - auto
+    - kfz
 ```
 
 ## 2. WordPress in Containern
 
- Ein gutes Beispiel ist ein WordPress-Blog. WordPress braucht:
+Ein gutes Beispiel ist ein WordPress-Blog. WordPress braucht:
 
-* einen Container mit dem Webserver (Apache)
-* einen Datenbankserver (MariaDB oder MySQL)
-* der Webserver muss mit seiner Datenbank sprechen können.
-* Port 80 des Containers muss auf der externen Netzwerkkarte lauschen
+- einen Container mit dem Webserver (Apache)
+- einen Datenbankserver (MariaDB oder MySQL)
+- der Webserver muss mit seiner Datenbank sprechen können.
+- Port 80 des Containers muss auf der externen Netzwerkkarte lauschen
 
 Legen Sie eine Datei mit dem Namen "docker-compose.yml" an. Das ist der Standardname, den Docker-Compose erwartet. Die folgende Zusammenstellung beschreibt eine simple WordPress-Zusammenstellung:
 
 ```yaml
-version: '3.8'
+version: "3.8"
 
 services:
   db:
@@ -153,11 +153,11 @@ slow_service:
 
 ## 3: Docker-Compose macht vieles einfacher:
 
-* Die Struktur wird schnell sichtbar
-* Mit `depends_on` bestimmen Sie (grob), welcher Container zuerst startet
-* Pfadangaben funktionieren relativ vom Pfad des Docker-Compose-Files
+- Die Struktur wird schnell sichtbar
+- Mit `depends_on` bestimmen Sie (grob), welcher Container zuerst startet
+- Pfadangaben funktionieren relativ vom Pfad des Docker-Compose-Files
 
 !!! note "Infrastruktur ist Code"
-    Um dem Ziel einen wesentlichen Schritt näher zu kommen, eine reproduzierbare Umgebung zu bauen, sollten Sie Ihre Docker-Compose-Files von Anfang an in eine Versionsverwaltung legen (Git). Und auch Dockerfiles von eigenen Images gehören in die Versionsverwaltung. Im nächsten Schritt wird dann automatisch gebaut (Continuous Integration).
+Um dem Ziel einen wesentlichen Schritt näher zu kommen, eine reproduzierbare Umgebung zu bauen, sollten Sie Ihre Docker-Compose-Files von Anfang an in eine Versionsverwaltung legen (Git). Und auch Dockerfiles von eigenen Images gehören in die Versionsverwaltung. Im nächsten Schritt wird dann automatisch gebaut (Continuous Integration).
 
     Guter Stil ist es, eine vorbereitete `.env-example` bereitzulegen. Die kann ein Nutzer des Repos umbenennen (`mv .env-example .env`) und direkt starten.

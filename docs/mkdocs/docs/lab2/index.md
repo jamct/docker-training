@@ -1,10 +1,10 @@
-# :fa-flask: Lab 2: Arbeiten mit Images
+# :material-flask: Lab 2: Arbeiten mit Images
 
 Im ersten Teil haben Sie bereits zwei Images benutzt: `busyboy` und `nginx`. Aber wo kommen diese überhaupt her?
 
 ![ ](https://heise.cloudimg.io/width/900/q65.png-lossy-65.webp-lossy-65.foil1/_www-heise-de_/select/ct/2017/15/1500578738258740/contentimages/image-1499146982969054.jpg){: class="noprint"}
 
-Der Reihe nach. Ursprung eines Images ist ein Rezept, das *Dockerfile*. Ein kleines Beispiel:
+Der Reihe nach. Ursprung eines Images ist ein Rezept, das _Dockerfile_. Ein kleines Beispiel:
 
 ```dockerfile
 FROM debian:buster-slim
@@ -20,20 +20,18 @@ Am Ende des Dockerfile folgt das Schlüsselwort `CMD`. Es definiert den Prozess,
 
 Solange dieser Prozess läuft, existiert der Container.
 
-
-|Schlüsselwort|Funktion|Beispiel|
-|---|---|---|
-|`FROM`|definiert das Basis-Image|`FROM debian:buster-slim`|
-|`RUN`|führt einen Befehl während des Bauprozesses aus|`RUN apt update && apt install ping`|
-|`COPY`|kopiert Dateien und Ordner in den Container|`COPY settings.conf /etc/test/settings.conf`|
-|`CMD`|definiert den Prozess, der im Container laufen soll|`CMD ping heise.de`|
-
+| Schlüsselwort | Funktion                                            | Beispiel                                     |
+| ------------- | --------------------------------------------------- | -------------------------------------------- |
+| `FROM`        | definiert das Basis-Image                           | `FROM debian:buster-slim`                    |
+| `RUN`         | führt einen Befehl während des Bauprozesses aus     | `RUN apt update && apt install ping`         |
+| `COPY`        | kopiert Dateien und Ordner in den Container         | `COPY settings.conf /etc/test/settings.conf` |
+| `CMD`         | definiert den Prozess, der im Container laufen soll | `CMD ping heise.de`                          |
 
 ## 1. Das erste eigene Image
 
 Legen Sie eine Datei `Dockerfile` an und kopieren Sie den Inhalt des obenstehenden Beispiels in die Datei. Dann kann der Bau beginnen.
 
-* Starten Sie den Bau mit:
+- Starten Sie den Bau mit:
 
 ```
 docker build .
@@ -88,7 +86,7 @@ docker image rm <id oder name>
 Der Docker-Daemon wird sich beschweren, solange noch ein Container auf Basis des Images existiert (auch gestoppte Container zählen dazu). Nutzen Sie [Ihr Wissen aus Lab 1](../lab1/#4-zusammenfassung), um die gestoppten Container zu identifizieren und alle Images zu entsorgen.
 
 !!! note "Images aufräumen"
-    Ungenutzte Images kosten Platz auf der Platte. Sie müssen sie nicht per Hand einzeln löschen. Für diesen Zweck gibt es:
+Ungenutzte Images kosten Platz auf der Platte. Sie müssen sie nicht per Hand einzeln löschen. Für diesen Zweck gibt es:
 
     ```
     docker image prune
@@ -96,11 +94,9 @@ Der Docker-Daemon wird sich beschweren, solange noch ein Container auf Basis des
 
 Damit ein gestoppter Container nicht herumliegt und sofort abgeräumt wird, gibt es den Parameter `--rm`:
 
-
 ```
 docker run --rm simpleping
 ```
-
 
 ## 2. Gute Images
 

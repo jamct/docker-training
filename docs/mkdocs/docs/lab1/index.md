@@ -1,12 +1,12 @@
-# :fa-flask: Lab 1: Erste Schritte mit Docker
+# :material-flask: Lab 1: Erste Schritte mit Docker
 
-* Docker bedient man auf der Kommandozeile. Der erste Befehl:
+- Docker bedient man auf der Kommandozeile. Der erste Befehl:
 
 ```
 docker version
 ```
 
-* Alle laufenden Container zeigt folgendes:
+- Alle laufenden Container zeigt folgendes:
 
 ```
 docker ps
@@ -19,7 +19,7 @@ Jeder Container besteht aus einem Image. Es enthält das Dateisystem mit allen D
 
 Einen Container starten Sie mit `docker run <Name des Images>`. Ein Abbild für Linux-Experimente heißt `busybox`.
 
-* Starten Sie Ihren ersten Container mit
+- Starten Sie Ihren ersten Container mit
 
 ```
 docker run -it busybox
@@ -39,16 +39,16 @@ Status: Downloaded newer image for busybox:latest
 / #
 ```
 
-* Sehen Sie sich im Dateisystem um.
-* Schauen Sie sich die Netzwerkkonfiguration mit `ifconfig` an
-* Versuchen Sie, eine Verbindung ins Internet herzustellen (z.B. `ping heise.de`)
-* Verlassen Sie den Container mit `exit`
+- Sehen Sie sich im Dateisystem um.
+- Schauen Sie sich die Netzwerkkonfiguration mit `ifconfig` an
+- Versuchen Sie, eine Verbindung ins Internet herzustellen (z.B. `ping heise.de`)
+- Verlassen Sie den Container mit `exit`
 
 ## 2. Der erste Server
 
 Kommandozeilenwerkzeuge wie `busybox` sind nicht das natürliche Habitat für Docker-Container. Es ist Zeit für den ersten Serverdienst, einen kleinen Nginx-Webserver. Ein Image für Nginx heißt schlicht: `nginx`.
 
-* Fahren Sie Ihren Server hoch:
+- Fahren Sie Ihren Server hoch:
 
 ```
 docker run -p 80:80 nginx
@@ -71,13 +71,12 @@ Digest: sha256:21f32f6c08406306d822a0e6e8b7dc81f53f336570e852e25fbe1e3e3d0d0133
 Status: Downloaded newer image for nginx:latest
 ```
 
-* Öffnen Sie die Adresse Ihres Test-Servers im Browser. Das Ergebnis sollte so aussehen:
+- Öffnen Sie die Adresse Ihres Test-Servers im Browser. Das Ergebnis sollte so aussehen:
 
 ![Der Webserver zeigt eine Wilkkomensseite an.](nginx.png){: style="width:50%"}
 
-* Beobachten Sie währenddessen die Kommandozeile. Sie zeigt in Echtzeit die Log-Ausgaben.
-* Beenden Sie den Server mit Strg+C.
-
+- Beobachten Sie währenddessen die Kommandozeile. Sie zeigt in Echtzeit die Log-Ausgaben.
+- Beenden Sie den Server mit Strg+C.
 
 ### 2.2 Server im Hintergrund-Modus
 
@@ -103,8 +102,7 @@ Wenn Sie im detached-Modus sehen wollen, was im Container passiert ist, öffnen 
 docker logs <id>
 ```
 
-
-* Stoppen Sie Ihren Webserver:
+- Stoppen Sie Ihren Webserver:
 
 ```
 docker stop <ID>
@@ -113,11 +111,11 @@ docker stop <ID>
 Der Browser findet die Seite nicht mehr, `docker ps` bleibt auch leer.
 
 !!! note "Praxistipp: Angehalten ist nicht weg"
-    Ein gestoppter Container ist nicht weg. Sie finden ihn mit `docker ps -a`. Erst mit einem `docker rm` ist er endgültig weg. Alle gestoppten Container entsorgen Sie mit:
+Ein gestoppter Container ist nicht weg. Sie finden ihn mit `docker ps -a`. Erst mit einem `docker rm` ist er endgültig weg. Alle gestoppten Container entsorgen Sie mit:
 
     ```
     docker rm $(docker ps -aq)
-    ```    
+    ```
 
     Ein Befehl, den man leider garantiert vergisst und öfter braucht.
 
@@ -158,7 +156,7 @@ Nehmen Sie eine Änderung an der Datei vor und speichern Sie mit "Strg+O" und "E
 Mit `exit` verlassen Sie den Container wieder.
 
 !!! warning "Manipulationen im Container"
-    Manipulationen dieser Art im Container sind nur während der Einrichtung und bei der Fehlersuche sinnvoll. An einem Container in Produktion nimmt man keine Änderungen vor – was Sie dort ändern, ist flüchtig: Wird der Container ausgetauscht, verschwindet die Änderung. In einem der nächsten Kapitel erfahren Sie, wie man für dauerhafte Änderungen vorgehen muss. 
+Manipulationen dieser Art im Container sind nur während der Einrichtung und bei der Fehlersuche sinnvoll. An einem Container in Produktion nimmt man keine Änderungen vor – was Sie dort ändern, ist flüchtig: Wird der Container ausgetauscht, verschwindet die Änderung. In einem der nächsten Kapitel erfahren Sie, wie man für dauerhafte Änderungen vorgehen muss.
 
 ## 3. Bleibende Daten (Volumes)
 
@@ -186,10 +184,10 @@ Sie haben gesehen, wie Sie Container starten, stoppen, löschen, Ports und Volum
 
 Die wichtigsten Befehle in der Übersicht:
 
-|Befehl|Funktion|Beispiel|
-|---|---|---|
-|`docker ps`|zeigt alle Container an|`docker ps -a`|
-|`docker run`|führt einen Container aus|`docker run -it busybox sh`|
-|`docker stop <id>`|beendet einen Container|`docker rm testserver`|
-|`docker rm <id>`|entfernt einen beendeten Container|`docker rm testserver`|
-|`docker rm $(docker ps -aq)`|alle gestoppten Container entsorgen| |
+| Befehl                       | Funktion                            | Beispiel                    |
+| ---------------------------- | ----------------------------------- | --------------------------- |
+| `docker ps`                  | zeigt alle Container an             | `docker ps -a`              |
+| `docker run`                 | führt einen Container aus           | `docker run -it busybox sh` |
+| `docker stop <id>`           | beendet einen Container             | `docker rm testserver`      |
+| `docker rm <id>`             | entfernt einen beendeten Container  | `docker rm testserver`      |
+| `docker rm $(docker ps -aq)` | alle gestoppten Container entsorgen |                             |
