@@ -2,15 +2,16 @@
 
 ![ ](https://www.heise-events.de/uploads/OnuAG8xJ/766x0_2560x0/Docker_2000x500.jpg)
 
-28. und 29.11.2023
+26. und 27.11.2024
 
 ---
 
 ## Ihr Dozent
 
 - Jan Mahn
-- seit 2017 c't-Redakteur im Ressort Systeme und Sicherheit
+- ab 2017 c't-Redakteur im Ressort Systeme und Sicherheit
 - zuständig für Server-Systeme, Container, Software-Entwicklung
+- seit 2024 stellv. Chefredakteur heise medien
 - (begeisterter) Docker-Nutzer seit 2017
 
 ---
@@ -46,9 +47,10 @@ Es geht um: <!-- .element: class="fragment" data-fragment-index="1" -->
 
 ## Wunschzustand
 
-- Die Anwendung läuft heute im eigenen RZ, morgen vielleicht in "der Cloud" <!-- .element: class="fragment" data-fragment-index="1" -->
-- Es gibt eine 1:1-Kopie auf meiner Entwicklermaschine <!-- .element: class="fragment" data-fragment-index="2" -->
-- Ich sichere die Daten und das Rezept, um ein Produktivsystem zu erzeugen <!-- .element: class="fragment" data-fragment-index="3" -->
+- Die Anwendung läuft heute im eigenen RZ, morgen vielleicht in "der Cloud". <!-- .element: class="fragment" data-fragment-index="1" -->
+- Es gibt eine 1:1-Kopie auf meiner Entwicklermaschine. <!-- .element: class="fragment" data-fragment-index="2" -->
+- Ich sichere die Daten und das Rezept, um ein Produktivsystem zu erzeugen. <!-- .element: class="fragment" data-fragment-index="3" -->
+- Wenn ich mehrere Kunden habe, die meine Anwendung nutzen, sollen auch die schnell eine identische Umgebung bekommen. <!-- .element: class="fragment" data-fragment-index="4" -->
 
 ---
 
@@ -67,6 +69,14 @@ Es geht um: <!-- .element: class="fragment" data-fragment-index="1" -->
 ## Container !== Virtualisierung
 
 ![ ](https://heise.cloudimg.io/bound/712x480/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/ct/zcontent/14/17-hocmsmeta/1407075531703681/contentimages/image-140594067592468.jpg)
+
+---
+
+![ ](./docker.png)
+
+---
+
+![ ](./docker2.png)
 
 ---
 
@@ -97,11 +107,20 @@ Alle Workshop-Inhalte finden Sie unter [docs.liefer.it](https://docs.liefer.it)
 
 ---
 
+## Was gehört in ein Image
+
+- die Anwendung <!-- .element: class="fragment" data-fragment-index="1" -->
+- ein minimales Userland <!-- .element: class="fragment" data-fragment-index="2" -->
+- ggf. Laufzeitumgebung / Interpreter <!-- .element: class="fragment" data-fragment-index="3" -->
+- alle Abhängigkeiten <!-- .element: class="fragment" data-fragment-index="4" -->
+
+---
+
 ## Herzlich Willkommen
 
 ![ ](https://www.heise-events.de/uploads/OnuAG8xJ/766x0_2560x0/Docker_2000x500.jpg)
 
-Tag 2, 29.11.2023
+Tag 2, 27.11.2024
 
 ---
 
@@ -115,14 +134,7 @@ Tag 2, 29.11.2023
 
 ---
 
-## Was gehört in ein Image
 
-- die Anwendung <!-- .element: class="fragment" data-fragment-index="1" -->
-- ein minimales Userland <!-- .element: class="fragment" data-fragment-index="2" -->
-- ggf. Laufzeitumgebung / Interpreter <!-- .element: class="fragment" data-fragment-index="3" -->
-- alle Abhängigkeiten <!-- .element: class="fragment" data-fragment-index="4" -->
-
----
 
 ## Images bestehen aus Schichten
 
