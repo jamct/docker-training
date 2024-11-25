@@ -72,11 +72,11 @@ Es geht um: <!-- .element: class="fragment" data-fragment-index="1" -->
 
 ---
 
-![ ](./docker.png)
+![ ](./slides/docker.png)
 
 ---
 
-![ ](./docker2.png)
+![ ](./slides/docker2.png)
 
 ---
 
@@ -133,8 +133,6 @@ Tag 2, 27.11.2024
 - [2017 wird die OCI gegründet](https://opencontainers.org)
 
 ---
-
-
 
 ## Images bestehen aus Schichten
 
