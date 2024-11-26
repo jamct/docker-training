@@ -1,4 +1,4 @@
-## Herzlich Willkommen
+## Herzlich willkommen
 
 ![ ]([https://images.ctfassets.net/3ujuzjed3id8/3QFe3Y7dkXiQfQkkb8dh0V/8c3057fad1b302c96e4e66791c064443/Docker-Academy-Shop-3072x768_hero.jpg)
 
@@ -101,9 +101,30 @@ Alle Workshop-Inhalte finden Sie unter [docs.liefer.it](https://docs.liefer.it)
 
 ---
 
-## Lab 2: Arbeiten mit Images
+## Zur Historie
 
-![ ](https://heise.cloudimg.io/width/900/q65.png-lossy-65.webp-lossy-65.foil1/_www-heise-de_/select/ct/2017/15/1500578738258740/contentimages/image-1499146982969054.jpg)
+- [2006 schlägt ein Google-Mitarbeiter die Funktion cgroups im Kernel vor](https://docs.kernel.org/admin-guide/cgroup-v1/cgroups.html)
+- 2007 im Kernel
+- 2013 erscheint Docker
+- 2015 erscheint Kubernetes
+- [2017 wird die OCI gegründet](https://opencontainers.org)
+
+---
+
+## Herzlich willkommen
+
+![ ](./slides/header.jpg)
+
+Tag 2, 27.11.2024
+
+---
+
+## Und meine eigenen Anwendungen?
+
+- Suche ein gutes Base-Image
+- Lege einen Ordner (besser direkt ein Repo an)
+- Lege dort ein Dockerfile an
+- Verpacke die eigene Anwendung mit allem, was dazu gehört
 
 ---
 
@@ -116,21 +137,23 @@ Alle Workshop-Inhalte finden Sie unter [docs.liefer.it](https://docs.liefer.it)
 
 ---
 
-## Herzlich Willkommen
+## Lab 2: Arbeiten mit Images
 
-![ ](https://www.heise-events.de/uploads/OnuAG8xJ/766x0_2560x0/Docker_2000x500.jpg)
-
-Tag 2, 27.11.2024
+![ ](https://heise.cloudimg.io/width/900/q65.png-lossy-65.webp-lossy-65.foil1/_www-heise-de_/select/ct/2017/15/1500578738258740/contentimages/image-1499146982969054.jpg)
 
 ---
 
-## Zur Historie
+## Ein Beispiel aus der Praxis
 
-- [2006 schlägt ein Google-Mitarbeiter die Funktion cgroups im Kernel vor](https://docs.kernel.org/admin-guide/cgroup-v1/cgroups.html)
-- 2007 im Kernel
-- 2013 erscheint Docker
-- 2015 erscheint Kubernetes
-- [2017 wird die OCI gegründet](https://opencontainers.org)
+```dockerfile
+FROM python:3-alpine
+RUN apk add build-base
+COPY ./mkdocs/ /mkdocs/
+WORKDIR /mkdocs/
+RUN pip install --upgrade pip && pip install mkdocs mkdocs-bootswatch
+EXPOSE 8080
+CMD ["mkdocs", "serve"]
+```
 
 ---
 
@@ -149,20 +172,6 @@ mkdir nginx-inside
 docker pull nginx:alpine
 docker save nginx:alpine -o nginx.tar
 tar -xf nginx.tar
-```
-
----
-
-## Ein Beispiel aus der Praxis
-
-```dockerfile
-FROM python:3-alpine
-RUN apk add build-base
-COPY ./mkdocs/ /mkdocs/
-WORKDIR /mkdocs/
-RUN pip install --upgrade pip && pip install mkdocs mkdocs-bootswatch
-EXPOSE 8080
-CMD ["mkdocs", "serve"]
 ```
 
 ---
