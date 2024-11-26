@@ -68,7 +68,7 @@ Es geht um: <!-- .element: class="fragment" data-fragment-index="1" -->
 
 ## Container !== Virtualisierung
 
-![ ](https://heise.cloudimg.io/bound/712x480/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/ct/zcontent/14/17-hocmsmeta/1407075531703681/contentimages/image-140594067592468.jpg)
+![ ](./slides/header.jpg)
 
 ---
 
