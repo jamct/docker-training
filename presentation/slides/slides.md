@@ -1,6 +1,6 @@
 ## Herzlich Willkommen
 
-![ ](https://www.heise-events.de/uploads/OnuAG8xJ/766x0_2560x0/Docker_2000x500.jpg)
+![ ]([https://images.ctfassets.net/3ujuzjed3id8/3QFe3Y7dkXiQfQkkb8dh0V/8c3057fad1b302c96e4e66791c064443/Docker-Academy-Shop-3072x768_hero.jpg)
 
 26. und 27.11.2024
 
