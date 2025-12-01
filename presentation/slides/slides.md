@@ -2,7 +2,7 @@
 
 ![ ]([https://images.ctfassets.net/3ujuzjed3id8/3QFe3Y7dkXiQfQkkb8dh0V/8c3057fad1b302c96e4e66791c064443/Docker-Academy-Shop-3072x768_hero.jpg)
 
-26. und 27.11.2024
+2. und 3.12.2025
 
 ---
 
@@ -115,7 +115,7 @@ Alle Workshop-Inhalte finden Sie unter [docs.liefer.it](https://docs.liefer.it)
 
 ![ ](./slides/header.jpg)
 
-Tag 2, 27.11.2024
+Tag 2, 3.12.2025
 
 ---
 
