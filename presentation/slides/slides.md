@@ -1,6 +1,6 @@
 ## Herzlich willkommen
 
-![ ]([https://heise.cloudimg.io/v7/https://images.ctfassets.net/3ujuzjed3id8/3QFe3Y7dkXiQfQkkb8dh0V/8c3057fad1b302c96e4e66791c064443/Docker-Academy-Shop-3072x768_hero.jpg)
+![ ]([https://images.ctfassets.net/3ujuzjed3id8/3QFe3Y7dkXiQfQkkb8dh0V/8c3057fad1b302c96e4e66791c064443/Docker-Academy-Shop-3072x768_hero.jpg)
 
 2. und 3.12.2025
 
