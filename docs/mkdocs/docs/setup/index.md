@@ -11,7 +11,7 @@ Es gibt die Docker Desktop mit grafischer Oberfläche für Windows und macOS. W�
 ![ ](macos.png){: style="width:50%"}
 
 !!! note "Bezahlen für Docker Desktop"
-Docker Desktop (mit der GUI) ist für kleine Unternehmen kostenlos. Ab 250 Mitarbeitern oder mehr als 10 Millionen US-Dollar Umsatz muss man monatlich pro Benutzer zahlen. Preise: [https://www.docker.com/pricing](https://www.docker.com/pricing)
+    Aktuell ist Docker Desktop kostenlos, bis Ende 2024 gab es mal eine Regelung, nach der größere Unternehmen eine kostenpflichtige Lizenz brauchen. Die ist wieder aufgehoben: [https://www.docker.com/pricing](https://www.docker.com/pricing)
 
 ## Für Linux und Linux-Server
 
